@@ -4,18 +4,6 @@
 
 /** Font Faces**/
 @font-face {
-	font-family: 'Open Sans';
-	font-style: normal;
-	font-weight: 100;
-	src: url(font/OpenSans-Light.ttf) format('truetype');
-}
-@font-face {
-	font-family: 'Open Sans';
-	font-style: normal;
-	font-weight: 700;
-	src: url(font/OpenSans-Bold.ttf) format('truetype');
-}
-@font-face {
   font-family: "LexendBold";
   src: url(/fonts/Lexend-Bold.ttf);
 }
@@ -29,20 +17,6 @@
 }
 
 /** Body **/
-
-html, body{
-	min-width: 600px;
-	max-width: 100%;
-	overflow-x: hidden;
-	background: #D9D7D2;
-	color:#323031;
-	margin: 0;
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
-	font-size: 22px;
-	line-height: 1.5em;
-	font-weight: 100;
-	min-height: 100%;
-}
 b, strong{
 	font-weight: 700;
 }
@@ -223,7 +197,7 @@ a:link, a:visited {
 #splash_home{
 	display: block;
     width:70px; height:70px;
-    background: url(home.png);
+    /* background: url(home.png); */
     background-size: 100% 100%;
     position: absolute;
     top: 10px;

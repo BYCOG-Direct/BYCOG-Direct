@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "LexendBold";
+    src: url(/fonts/Lexend-Bold.ttf);
+}
+@font-face {
+    font-family: "LexendReg";
+    src: url(/fonts/Lexend-Regular.ttf);
+}
+@font-face {
+    font-family: "LexendLight";
+    src: url(/fonts/Lexend-Light.ttf);
+}
+
+html, body{
+	min-width: 600px;
+	max-width: 100%;
+	background: #D9D7D2;
+	color:#323031;
+	margin: 0;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 22px;
+	line-height: 1.5em;
+	font-weight: 100;
+	min-height: 100%;
+}
+b, strong{
+	font-weight: 700;
+}
+
+@media (max-width: 641px){
+/* 	body{
+		font-size: 30px;
+	} */
+	#intro, #footer_nav_container{
+		text-align: left !important;
+	}
+}
+
