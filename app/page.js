@@ -17,8 +17,8 @@ export default function Home() {
           >
             By{' '}
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
+              src="/images/BYCOG_Direct_Logo.png"
+              alt="BYCOG Direct Logo"
               className={styles.vercelLogo}
               width={100}
               height={24}
