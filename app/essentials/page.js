@@ -13,14 +13,14 @@ export default function Page() {
 
             {/* <!-- Navigation --> */}
             <div className="navigationBar">
-                <div className="home"><font COLOR="#3D3B3C">..</font><Link href="https://bycog-direct.lobobo.repl.co/home">Home</Link></div>
+                <div className="home"><font COLOR="#3D3B3C">..</font><Link href="/">Home</Link></div>
                 <div className="divider"></div>
-                <div className="database"><Link href="https://bycog-direct.lobobo.repl.co/">Database</Link></div>
+                <div className="database"><Link href="/database/">Database</Link></div>
                 <div className="divider"></div>
-                <div className="courses"><Link href="https://bycog-direct.lobobo.repl.co/essentials/">Courses</Link></div>
+                <div className="courses"><Link href="/essentials/">Courses</Link></div>
                 <div className="divider"></div>
-                <div className="tools"><Link href="https://bycog-direct.lobobo.repl.co/visualiser">Tools</Link></div>
-                <div className="profilePicture"><Link href="https://bycog-direct.lobobo.repl.co/visualiser"><div className="profilePicture"></div></Link></div>
+                <div className="tools"><Link href="visualiser/">Tools</Link></div>
+                <div className="profilePicture"><Link href="/"><div className="profilePicture"></div></Link></div>
             </div>
 
             <div className="header">
@@ -121,7 +121,7 @@ export default function Page() {
                     <div className="lines"> </div>
                     <div className="pageAlignCenter">
                         <p className="titleTextBox">
-                            <Link href="https://bycog-direct.lobobo.repl.co/"><font COLOR="#323031">Hook</font></Link><br/><font COLOR="grey" SIZE="4px">Obligated and compulsed</font>
+                            <Link href="/"><font COLOR="#323031">Hook</font></Link><br/><font COLOR="grey" SIZE="4px">Obligated and compulsed</font>
                         </p>
                         <div className="pageAlignVerticle">
                             <div className="pageAlignCenter">
@@ -140,7 +140,7 @@ export default function Page() {
                     <div className="lines"> </div>
                     <div className="pageAlignCenter">
                         <p className="titleTextBox">
-                            <Link href="https://byco-direct.lobobo.repl.co/"><font COLOR="#323031">Void</font></Link><br/><font COLOR="grey" SIZE="4px">Resisted and deferred</font>
+                            <Link href="/"><font COLOR="#323031">Void</font></Link><br/><font COLOR="grey" SIZE="4px">Resisted and deferred</font>
                         </p>
                         <div className="pageAlignVerticle">
                             <div className="pageAlignCenter">
@@ -198,7 +198,7 @@ export default function Page() {
                                     <div className="pageAlignCenter">
                                         <div className="wordBoxes4">
                                             <p className="titleTextBox">
-                                                <Link href="https://byco-direct.lobobo.repl.co/"><font COLOR="#323031">Ai - Abstract Intensive</font></Link>
+                                                <Link href="/"><font COLOR="#323031">Ai - Abstract Intensive</font></Link>
                                             </p>
                                             <p className="paragraphBox"> 
                                                 Interacting with and refining concepts into a compressed ideal and essential perspective. 
@@ -206,7 +206,7 @@ export default function Page() {
                                         </div>
                                         <div className="wordBoxes4">
                                             <p className="titleTextBox">
-                                                <Link href="https://byco-direct.lobobo.repl.co/"><font COLOR="#323031">Ce - Concrete Expansive</font></Link>
+                                                <Link href="/"><font COLOR="#323031">Ce - Concrete Expansive</font></Link>
                                             </p>
                                             <p className="paragraphBox"> 
                                                 Seeing and contrasting present physical reality and experience for what it is, and how to react to it. 
@@ -224,7 +224,7 @@ export default function Page() {
                                     <div className="pageAlignCenter">
                                         <div className="wordBoxes4">
                                             <p className="titleTextBox">
-                                                <Link href="https://byco-direct.lobobo.repl.co/"><font COLOR="#323031">Ci - Concrete Intensive</font></Link>
+                                                <Link href="/"><font COLOR="#323031">Ci - Concrete Intensive</font></Link>
                                             </p>
                                             <p className="paragraphBox"> 
                                                 Interacting with and refining meaning and experiences into reliable and comfortable life systems. 
@@ -232,7 +232,7 @@ export default function Page() {
                                         </div>
                                         <div className="wordBoxes4">
                                             <p className="titleTextBox">
-                                                <Link href="https://byco-direct.lobobo.repl.co/"><font COLOR="#323031">Ae - Abstract Expansive</font></Link>
+                                                <Link href="/"><font COLOR="#323031">Ae - Abstract Expansive</font></Link>
                                             </p>
                                             <p className="paragraphBox"> 
                                                 Seeing and contrasting possibilities and concepts for what they could be, and what they imply. 
@@ -255,7 +255,7 @@ export default function Page() {
                                 <div className="pageAlignCenter">
                                     <div className="wordBoxes4">
                                         <p className="titleTextBox">
-                                            <Link href="https://byco-direct.lobobo.repl.co/"><font COLOR="#323031">Ri - Reason Intensive</font></Link>
+                                            <Link href="/"><font COLOR="#323031">Ri - Reason Intensive</font></Link>
                                         </p>
                                         <p className="paragraphBox"> 
                                             Filtering and refining the interaction with reason by removing falsehoods and contradictions. 
@@ -263,7 +263,7 @@ export default function Page() {
                                     </div>
                                     <div className="wordBoxes4">
                                         <p className="titleTextBox">
-                                            <Link href="https://byco-direct.lobobo.repl.co/"><font COLOR="#323031">Ve - Value Expansive</font></Link>
+                                            <Link href="/"><font COLOR="#323031">Ve - Value Expansive</font></Link>
                                         </p>
                                         <p className="paragraphBox"> 
                                             Contrasting the spectrum of values in relation to how they harmonise and are feeling to people. 
@@ -281,7 +281,7 @@ export default function Page() {
                                     <div className="pageAlignCenter">
                                         <div className="wordBoxes4">
                                             <p className="titleTextBox">
-                                                <Link href="https://byco-direct.lobobo.repl.co/"><font COLOR="#323031">Vi - Value Intensive</font></Link>
+                                                <Link href="/"><font COLOR="#323031">Vi - Value Intensive</font></Link>
                                             </p>
                                             <p className="paragraphBox"> 
                                                 Filtering and refining the interaction with value by processing emotion and prioritising. 
@@ -289,7 +289,7 @@ export default function Page() {
                                         </div>
                                         <div className="wordBoxes4">
                                             <p className="titleTextBox">
-                                                <Link href="https://byco-direct.lobobo.repl.co/"><font COLOR="#323031">Re - Reason Expansive</font></Link>
+                                                <Link href="/"><font COLOR="#323031">Re - Reason Expansive</font></Link>
                                             </p>
                                             <p className="paragraphBox"> 
                                                 Contrasting the spectrum of reasons and options in relation to if they work and are functional for people. 
@@ -332,7 +332,7 @@ export default function Page() {
                     <div className="wordBoxes1">
                         <p></p> 
                         <p className="titleTextBox">
-                            <Link href="https://byco-direct.lobobo.repl.co/"><font COLOR="#D9D7D2">D - Direct</font></Link><br/><font COLOR="grey" SIZE="5px">Ai or Ci with Ve or Re</font>
+                            <Link href="/"><font COLOR="#D9D7D2">D - Direct</font></Link><br/><font COLOR="grey" SIZE="5px">Ai or Ci with Ve or Re</font>
                         </p>
                         <p className="paragraphBox"> 
                             The movement of aligning the tribe with known, and aligning known with the tribe.<br/><br/><i>getting the path known with others</i>
@@ -341,7 +341,7 @@ export default function Page() {
                     <div className="wordBoxes1">
                         <p></p> 
                         <p className="titleTextBox">
-                            <Link href="https://byco-direct.lobobo.repl.co/"><font COLOR="#D9D7D2">C - Confer</font></Link><br/><font COLOR="grey" SIZE="5px">Ae or Ce with Ve or Re</font>
+                            <Link href="/"><font COLOR="#D9D7D2">C - Confer</font></Link><br/><font COLOR="grey" SIZE="5px">Ae or Ce with Ve or Re</font>
                         </p> 
                         <p className="paragraphBox">
                             The movement of bouncing new with the tribe, and of the tribe contributing to the new.<br/><br/><i>comparing and sharing paths</i>
@@ -355,7 +355,7 @@ export default function Page() {
                     <div className="wordBoxes1">
                         <p></p> 
                         <p className="titleTextBox">
-                                <Link href="https://byco-direct.lobobo.repl.co/"><font COLOR="#D9D7D2">R - Revise</font></Link><br/><font COLOR="grey" SIZE="5px">Ai or Ci with Vi or Ri</font>
+                                <Link href="/"><font COLOR="#D9D7D2">R - Revise</font></Link><br/><font COLOR="grey" SIZE="5px">Ai or Ci with Vi or Ri</font>
                         </p>
                         <p className="paragraphBox"> 
                             The movement of self reflecting on known, and of known being tweaked by the self.<br/><br/><i>minimising the path taken</i>
@@ -364,7 +364,7 @@ export default function Page() {
                     <div className="wordBoxes1">
                         <p></p> 
                         <p className="titleTextBox">
-                            <Link href="https://byco-direct.lobobo.repl.co/"><font COLOR="#D9D7D2">S - Search</font></Link><br/><font COLOR="grey" SIZE="5px">Vi or Ri with Ae or Ce</font>
+                            <Link href="/"><font COLOR="#D9D7D2">S - Search</font></Link><br/><font COLOR="grey" SIZE="5px">Vi or Ri with Ae or Ce</font>
                         </p> 
                         <p className="paragraphBox">
                             The movement of aligning self to the new, and selecting what new to align self to.<br/><br/><i>putting self on the preferred path</i>
@@ -406,7 +406,7 @@ export default function Page() {
                     <div className="wordBoxes1">
                         <p></p> 
                         <p className="titleTextBox">
-                                <Link href="https://byco-direct.lobobo.repl.co/"><font COLOR="#D9D7D2">F - Fluid</font></Link><font COLOR="grey">ifying</font>
+                                <Link href="/"><font COLOR="#D9D7D2">F - Fluid</font></Link><font COLOR="grey">ifying</font>
                         </p>
                         <p className="paragraphBox"> 
                             Strengthens itself by increasing flexibility. Any contention or challenge can be dodged around and allowed to pass through, rather than itself being destroyed.<br/><br/><i>an unsinkable buoyant</i>
@@ -415,7 +415,7 @@ export default function Page() {
                     <div className="wordBoxes1">
                         <p></p> 
                         <p className="titleTextBox">
-                            <Link href="https://byco-direct.lobobo.repl.co/"><font COLOR="#D9D7D2">S - Solid</font></Link><font COLOR="grey">ifying</font>
+                            <Link href="/"><font COLOR="#D9D7D2">S - Solid</font></Link><font COLOR="grey">ifying</font>
                         </p> 
                         <p className="paragraphBox">
                             Strengthens itself by decreasing flexibility. Any contention or challenge can be blocked and destroyed through sheer force, rather than itself being destroyed.<br/><br/><i>an immovable anchor</i>
@@ -487,7 +487,7 @@ export default function Page() {
                     <sharing 
                         title="BYCOG Direct"
                         text="See who helped us"
-                        link="https://BYCOG-DIRECT.lobobo.repl.co" 
+                        link="/" 
                     />
                 </div>
             </div>

@@ -5,14 +5,14 @@ export default function Page() {
         <main>
             {/* <!-- Navigation --> */}
             <div class="navigationBar">
-                <div class="home"><font COLOR="#3D3B3C">..</font><Link href="https://bycog-direct.lobobo.repl.co/">Home</Link></div>
+                <div class="home"><font COLOR="#3D3B3C">..</font><Link href="/">Home</Link></div>
                 <div class="divider"></div>
-                <div class="database"><Link href="https://bycog-direct.lobobo.repl.co/">Database</Link></div>
+                <div class="database"><Link href="/database/">Database</Link></div>
                 <div class="divider"></div>
-                <div class="courses"><Link href="https://bycog-direct.lobobo.repl.co/essentials/">Courses</Link></div>
+                <div class="courses"><Link href="/essentials/">Courses</Link></div>
                 <div class="divider"></div>
-                <div class="tools"><Link href="https://bycog-direct.lobobo.repl.co/visualiser">Tools</Link></div>
-                <div class="profilePicture"><Link href="https://bycog-direct.lobobo.repl.co/visualiser"><div class="profilePicture"></div></Link></div>
+                <div class="tools"><Link href="/visualiser/">Tools</Link></div>
+                <div class="profilePicture"><Link href="/visualiser/"><div class="profilePicture"></div></Link></div>
             </div>
             
             <div class="header">

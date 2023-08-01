@@ -16,14 +16,14 @@ export default function Home() {
 
       {/* <!-- Navigation --> */}
       <div className="navigationBar">
-        <div className="home"><font COLOR="#3D3B3C">..</font><Link href="https://bycog-direct.lobobo.repl.co/">Home</Link></div>
+        <div className="home"><font COLOR="#3D3B3C">..</font><Link href="/">Home</Link></div>
         <div className="divider"></div>
-        <div className="database"><Link href="https://bycog-direct.lobobo.repl.co/">Database</Link></div>
+        <div className="database"><Link href="/database/">Database</Link></div>
         <div className="divider"></div>
-        <div className="courses"><Link href="https://bycog-direct.lobobo.repl.co/essentials/">Courses</Link></div>
+        <div className="courses"><Link href="/essentials/">Courses</Link></div>
         <div className="divider"></div>
-        <div className="tools"><Link href="https://bycog-direct.lobobo.repl.co/visualiser">Tools</Link></div>
-        <div className="profilePicture"><Link href="https://bycog-direct.lobobo.repl.co/visualiser"><div className="profilePicture"></div></Link></div>
+        <div className="tools"><Link href="/visualiser/">Tools</Link></div>
+        <div className="profilePicture"><Link href="/"><div className="profilePicture"></div></Link></div>
       </div>
 	
       {/* <!-- Attention Hook --> */}
@@ -47,59 +47,6 @@ export default function Home() {
 
       <div className="pageAlignCenter">
         <div className="typeExamples"></div>
-      </div>
-      
-      {/* <!-- PRELUDE --> */}
-      <div className="pageAlignCenter">
-        <div id="standard_text">
-          <p></p>
-          <p className="titleText">
-            PRELUDE
-          </p>
-          <p className="paragraph">
-            You already notice differences in the way people process, what BYCO Direct will do is to provide a better structure you can use to track, compare and support yourself and others.
-          </p>
-          <p className="paragraph">
-            We believe people give away the process, their bycode, going on in their mind by how they interact with the world. So if you know what to look out for you can quickly understand what makes someone tick. 
-          </p>
-          <p className="paragraph">
-            A bycode is not a physical part of someone's body, rather an abstracted model of their repeated themes.<br/>Each bycode is built from 4 layers:
-          </p>
-        </div>
-      </div>
-
-      <div>
-        <div className="pageAlignCenter">
-          <div className="pageAlignVerticle">
-            <div className="lines"> </div>
-            <p className="paragraphCentralist"> 
-              The <b>modules</b> are the base structure of each bycode. 
-            </p>
-            <div className="lines"> </div>
-            <p className="paragraphCentralist">
-              The <b>reflexes</b> are like muscles between the modules. 
-            </p>
-            <div className="lines"> </div>
-            <p className="paragraphCentralist">
-              The <b>stances</b> characterize the modules some more.
-            </p>
-            <div className="lines"> </div>
-            <p className="paragraphCentralist">
-              And the <b>catch</b> is the big gamble each bycode takes. 
-            </p>
-            <div className="lines"> </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="pageAlignCenter">
-        <div id="standard_text">
-          <p className="paragraph">
-            An easy place you could see a person's bycode be used is when they are placed into a new location.
-            For example, do they quickly search around all the new exciting things that surround them or do they start clumping the things into the categories they know?
-          </p>
-          <p></p>
-        </div>
       </div>
 
       {/* <!-- NEXT --> */}
@@ -137,7 +84,7 @@ export default function Home() {
           <sharing 
             title="BYCO Direct"
             text="See who helped us"
-            link="https://BYCO-DIRECT.lobobo.repl.co">
+            link="/">
           </sharing>
         </div>
       </div>
