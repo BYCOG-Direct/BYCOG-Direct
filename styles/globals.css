@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #D9D7D2;
+    font-size: 20px;
+    color: #3D3B3C;
+}
+
+.bannerClip {
+    clip-path: polygon(0 0, 37.5% 0, 50% 90%, 62.5% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.pageClip {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 62.5% 100%, 50% 10%, 37.5% 100%, 0 100%);
+}
