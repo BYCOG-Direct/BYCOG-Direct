@@ -1,3 +1,4 @@
+import TestSuggest from './testSuggest';
 import Banner from '@components/banner';
 import Footer from '@components/footer';
 import Image from 'next/image';
@@ -8,7 +9,10 @@ export default function Home() {
   
   return (
     <main>
+      
       <Banner />
+
+      <TestSuggest />
 
       <div className='py-10 text-center max-w-[600px] mx-auto'>
         <p>Below each person’s likes, dislikes, decision making and personality is a	process they impulsively use all the time.</p>
