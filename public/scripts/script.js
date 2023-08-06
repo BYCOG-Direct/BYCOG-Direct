@@ -1,10 +1,9 @@
 var a = 1
 
-onwheel = (event) => {
-	console.log(WheelEvent.deltaY)
-}
+document.getElementById("god").setAttribute("onclick","alert('blah');");
 
 function duplicate(n) {
+	console.log(n);
 	n = n.slice(-1);
 	a = a + 1;
 	clone = document.getElementById('container'+n).cloneNode(true);
@@ -62,6 +61,7 @@ function check(x) {
 }
 
 function uncheck(x,n) {
+	console.log(x);
 	n = n.slice(-1).toString();
 	document.getElementById(x+n).checked = false;
 	total(n);
@@ -110,7 +110,7 @@ locations.set(3, "direct");
 function drawType(n) {
 	var osnk = [0,0,0,0];
 	var colet = ["","","",""]
-	eval = "";
+	evalJ = "";
 	iden = "";
 	active.set(parseInt(n), "no");
 	document.getElementById("crossTethers"+n).style.opacity = "0";
@@ -129,10 +129,10 @@ function drawType(n) {
 	document.getElementById("knownArrow"+n).style.left = "-45px";
 	
 	if (isChecked("reasonModule"+n)) {
-		eval = "r";
+		evalJ = "r";
 		makeActive(n);
 	} else if (isChecked("valueModule"+n)) {
-		eval = "v";
+		evalJ = "v";
 		makeActive(n);
 	}
 	
@@ -161,12 +161,12 @@ function drawType(n) {
 	if (isChecked("othersModule"+n)) {
 		osnk[0] += 1;
 		osnk[1] -= 1;
-		colet[0] = eval;
+		colet[0] = evalJ;
 		makeActive(n);
 	} else if (isChecked("selfModule"+n)) {
 		osnk[1] += 1;
 		osnk[0] -= 1;
-		colet[1] = eval;
+		colet[1] = evalJ;
 		makeActive(n);
 	}
 
