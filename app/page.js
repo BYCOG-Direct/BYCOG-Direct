@@ -1,7 +1,8 @@
-import TestSuggest from './testSuggest';
 import Banner from '@components/banner';
 import Footer from '@components/footer';
+import Testimonials from '@components/testimonials';
 import Image from 'next/image';
+import TestSuggest from './testSuggest';
 import PopularContainer from './popularContainer';
 import { PopularEntries, PopularProfiles, PopularTools } from './popularItems';
 
@@ -18,6 +19,8 @@ export default function Home() {
         <p>Below each person’s likes, dislikes, decision making and personality is a	process they impulsively use all the time.</p>
         <p>We call these processes <span className='border-b border-orange text-orange'>bycodes</span>.</p>
       </div>
+
+      <Testimonials />
 
       <div className='text-center py-4 text-4xl font-semibold'>Top Courses</div>
       <div className='text-center font-light text-[17px]'>the most used courses on this website</div>
