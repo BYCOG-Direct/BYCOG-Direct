@@ -6,12 +6,25 @@ import {useState} from 'react'
 
 
 const Nav = () => {
-    const [color, setColor] = useState(true)
-    const NavColor = () => {
-        if (window.scrollY >= 90) {setColor(false)}
-        else {setColor(true)}
-     }
-    window.addEventListener('scroll', NavColor)
+    const [color, setColor] = useState(true);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY >= 90) {
+          setColor(false);
+        } else {
+          setColor(true);
+        }
+      };
+  
+      // Add event listener when the component mounts
+      window.addEventListener('scroll', handleScroll);
+  
+      // Remove the event listener when the component unmounts
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []); // The empty dependency array ensures that the effect is applied only once on mount
     return (
         <div className={color ? "duration-500 fixed flex justify-center gap-2 items-center py-3 px-3 right-20 top-10 z-20 rounded-full" : "duration-150 bg-gray shadow-xl fixed flex justify-center gap-2 items-center py-3 px-3 right-20 top-10 z-20 rounded-full"}>
             <div className="flex justify-center divide-x-2 divide-tan text-white text-center font-light text-xl">
