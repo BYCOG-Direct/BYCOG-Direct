@@ -8,6 +8,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        logoBlue: '#7078BF',
+        logoGreen: '#81B29A',
+        logoYellow: '#F2CC8F',
+        logoRed: '#E07A5F',
         gray: '#3D3B3C',
         darkGray: '#323031',
         tan: '#D9D7D2',
