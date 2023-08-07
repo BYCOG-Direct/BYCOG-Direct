@@ -24,6 +24,7 @@ const Banner = () => {
   return (
     <>
       <div className="bg-darkGray flex justify-center align-center flex-col pt-40 w-full">
+        {/* <div className="flex justify-end w-full"> <div className="relative bg-black w-[438px] h-[64px] right-20 -top-[132px] rounded-full"> </div> </div> */}
         <Image
           className='w-[750px] h-full mx-auto'
           src="/images/BYCOG_Direct_Logo.png"
