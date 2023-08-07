@@ -17,7 +17,7 @@ export default function Home() {
 
       <div className='py-10 text-center max-w-[750px] mx-auto'>
         <p>Below each person’s likes, dislikes, decision making and personality is a	process they impulsively use all the time.</p>
-        <p>We call these processes <span className='border-b border-orange text-orange'>bycodes</span>.</p>
+        <p>We call these processes bycodes.</p>
       </div>
 
       <Testimonials />

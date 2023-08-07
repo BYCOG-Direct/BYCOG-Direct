@@ -91,7 +91,7 @@ export default function Page() {
                         HOOKS & VOIDS
                     </p>
                     <p className="text-center text-2xl m-1 p-1 max-w-[750px] mx-auto">
-                        A single situation won't be enough, but after observing a person for a while, patterns will emerge for what they are compelled to do and what they avoid. We call these hooks and voids. 
+                        A single situation won't be enough, but after observing a person for a while, patterns will emerge for what they are compelled to do and what they avoid.<br/>We call these hooks and voids. 
                     </p>
                 </div>
             </div>
@@ -159,7 +159,7 @@ export default function Page() {
                         The modules are the building blocks that make up someone's process. There are 8 modules each with different functions. They work together through the demands.
                     </p>
                     <p className="text-center text-2xl m-1 p-1 max-w-[750px] mx-auto">
-                        Each module has a natural opposite in the bycode; pulling one pushes the other, and lifting one lowers the other. <br/>These natural opposites form an axis. <i>(The plural of axis is axes)</i>
+                        Each module has a natural opposite in the bycode; pulling one pushes the other, and lifting one lowers the other. <br/>These natural opposites form an axis.<br/><i>(The plural of axis is axes)</i>
                     </p>
                 </div>
             </div>

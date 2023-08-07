@@ -16,9 +16,9 @@ const Footer = () => {
                     <div className='mt-3 text-sm font-light ml-2'>
                         BYCOG Direct is a behavioural taxonomy and is not accepted or recognised in psychology or neuroscience. 
                         BYCOG Direct, and BYCOGNITION overall, is a deviation and split off from the  
-                        <Link className='text-orange ml-1 hover:text-lightOrange hover:border-b border-lightOrange' href="https://www.objectivepersonalitysystem.com/">Objective Personality System</Link> started by D. & S. Powers. 
+                        <Link className='text-orange ml-1 transition hover:text-lightOrange' href="https://www.objectivepersonalitysystem.com/">Objective Personality System</Link> started by D. & S. Powers. 
                         The reflexes, stances and many other factors have their concept originate from them, and for that we thank them for sharing such insightful information open source.
-                        The modules have their concept originate from <Link className='text-orange ml-1 hover:text-lightOrange hover:border-b border-lightOrange' href="https://wikisocion.github.io/content/psychological_types.html">Psychological Types</Link> by C. G. Jung. 
+                        The modules have their concept originate from <Link className='text-orange ml-1 transition hover:text-lightOrange transition' href="https://wikisocion.github.io/content/psychological_types.html">Psychological Types</Link> by C. G. Jung. 
                         Some definitions have shifted, and will not correlate with what Jung intended. To avoid confusion they have been given new names and labels.
                     </div>
                 </div>
