@@ -5,10 +5,10 @@ export default function Page() {
     return (
         <main>
             <div className="flex flex-row justify-center content-center">
-                <div className="bg-darkGray h-40 w-screen">
+                <div className="bg-darkGray h-32 w-screen">
                     <div className="flex flex-row text-center"> 
-                        <img src="/images/BYCOG_Direct_Logo.png" className="w-auto h-16 m-11 transition"/>
-                        <p className="text-white mt-14 text-4xl">Essentials</p>
+                        <img src="/images/BYCOG_Direct_Logo.png" className="w-auto h-12 m-9 transition"/>
+                        <p className="text-white mt-10 text-4xl">Essentials</p>
                     </div>
                 </div>
             </div>

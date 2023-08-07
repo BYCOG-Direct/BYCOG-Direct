@@ -27,7 +27,7 @@ const Nav = () => {
       };
     }, []); // The empty dependency array ensures that the effect is applied only once on mount
     return (
-        <div className={color ? "duration-500 fixed flex justify-center gap-2 items-center py-3 px-3 right-20 top-10 z-20 rounded-full" : "duration-150 bg-gray shadow-xl fixed flex justify-center gap-2 items-center py-3 px-3 right-20 top-10 z-20 rounded-full"}>
+        <div className={color ? "duration-500 fixed flex justify-center gap-2 items-center py-3 px-3 right-20 top-7 z-20 rounded-full" : "duration-150 bg-gray shadow-xl fixed flex justify-center gap-2 items-center py-3 px-3 right-20 top-4 z-20 rounded-full"}>
             <div className="flex justify-center divide-x-2 divide-tan text-white text-center font-light text-xl">
                 <Link href="/" className="py-1 px-3 hover:text-tan">Home</Link>
                 <Link href="/database" className="py-1 px-3 hover:text-tan">Database</Link>
