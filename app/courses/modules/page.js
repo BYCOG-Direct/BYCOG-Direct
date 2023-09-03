@@ -98,7 +98,8 @@ export default function Page() {
                         <div className="flex mx-auto w-fit gap-x-3">
 
                             <ModuleBox  name="Ri - Reason Intensive"
-                                        description="Filtering and refining the interaction with reason by removing falsehoods and contradictions." />
+                                        description="Filtering and refining the interaction with reason by removing falsehoods and contradictions."
+                                        link="./courses/modules/Ri" />
 
                             <ModuleBox  name="Re - Reason Expansive"
                                         description="Contrasting the spectrum of reasons and options in relation to if they work and are functional for people." />
@@ -135,9 +136,9 @@ export default function Page() {
 
 function ModuleBox ( { name, description, link } ) {
 
-    return <div className="transition-colors bg-white rounded-md shadow-lg cursor-pointer h-44 hover:bg-slate-100 w-96">
+    return <Link className="transition-colors bg-white rounded-md shadow-lg cursor-pointer h-44 hover:bg-slate-100 w-96" href={link || "./"}>
             <h4 className="my-4 text-3xl text-center text-darkGray">{name}</h4>
             <p className="text-lg text-center px-7 text-gray">{description}</p>
-        </div>
+        </Link>
 
 }
