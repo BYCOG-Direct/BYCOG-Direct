@@ -41,20 +41,20 @@ export default function Page() {
                         <p className="text-xl">The Best Type</p>
                     </div>
 
-                    <div className="py-4 space-y-4 bg-white rounded-md">
+                    <div className="pb-4 space-y-4 text-white rounded-md">
 
                         <div className="flex px-4 space-x-4">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/hNPJhR7qZ4g?si=hiHqJOxKikBwqICk&amp;clip=Ugkx8ytif46JtzATaH9W4-5HLM0Cex_lVLV7&amp;clipt=EJDyCxi_sg8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <div className="rounded-md w-[28rem] bg-white">
+                            <div className="rounded-md w-96">
                                 Matt Damon telling a story because I needed a placeholder here.
                             </div>
                         </div>
 
                         <div className="flex px-4 space-x-4">
-                            <div className="rounded-md w-[28rem] bg-white">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/hNPJhR7qZ4g?si=hiHqJOxKikBwqICk&amp;clip=Ugkx8ytif46JtzATaH9W4-5HLM0Cex_lVLV7&amp;clipt=EJDyCxi_sg8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <div className="rounded-md w-96">
                                 The same Matt Damon story.
                             </div>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/hNPJhR7qZ4g?si=hiHqJOxKikBwqICk&amp;clip=Ugkx8ytif46JtzATaH9W4-5HLM0Cex_lVLV7&amp;clipt=EJDyCxi_sg8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                         
                     </div>
