@@ -1,6 +1,5 @@
 var a = 1
 
-document.getElementById("god").setAttribute("onclick","alert('blah');");
 
 function duplicate(n) {
 	console.log(n);
