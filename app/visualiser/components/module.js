@@ -1,24 +1,65 @@
 "use client"
 import Image from 'next/image';
-import { useEffect } from "react";
 import React, { useState } from 'react'
 import Script from 'next/script'
-import { cloneElement } from 'react';
+
+const emptyType = {
+    opsType: null,
+    textType1: null,
+    textType2: null,
+    identifierModule: null,
+    selfModule: null,
+    knownModule: null,
+    valueModule: null,
+    abstractModule: null,
+    intermediateModule: null,
+    developerModule: null,
+    solidSelfModule: null,
+    solidKnownModule: null,
+    evaluatorModule: null,
+    othersModule: null,
+    newsModule: null,
+    reasonModule: null,
+    concreteModule: null,
+    extremeModule: null,
+    navigatorModule: null,
+    solidOthersModule: null,
+    solidNewModule: null,
+}
 
 const Module = () => {
+    const [type, setType] = useState(emptyType);
+
+    const handleCheckboxChange = (event) => {
+        const moduleName = event.target.id;
+        const uncheckModuleName = event.target.getAttribute('data-uncheck');
+        setType(prevType => ({
+            ...prevType,
+            [uncheckModuleName]: !event.target.checked,
+            [moduleName]: event.target.checked,
+        }));
+    };
+
+    const changeType = (event) => {
+        const moduleName = event.target.id;
+        setType(prevType => ({
+            ...prevType,
+            [moduleName]: event.target.value
+        }))
+    }
 
     // These event handlers enable the id's of the elements to be passed to the Javascript
     const passTo = (event, param) => {
-        uncheck(param,event.currentTarget.id);
+        uncheck(param, event.currentTarget.id);
         textWrite(event.currentTarget.id)
     };
 
-    const clear = (event) => {
-        clearAll(event.currentTarget.id);
+    const clear = () => {
+        setType(emptyType);
     };
 
-    const copyText = (event) => {
-        copy(event.currentTarget.id);
+    const copyText = () => {
+        navigator.clipboard.writeText(`${textType1}:${textType2}`);
     };
 
     const read = (event) => {
@@ -26,29 +67,20 @@ const Module = () => {
         convertToOps(event.currentTarget.id)
     };
 
-    const newEmpty = (event) => {
-        empty(event.currentTarget.id);
-    };
-
-    const newDuplicate = (event) => {
-        duplicate(event.currentTarget.id);
-    };
-
     const write = (event) => {
         convertFromOps(event.currentTarget.id)
     };
 
-    const clone = (event) => {
-        console.log("Cloned module");
-        React.cloneElement(<Module/>);
-    };
+    // const newEmpty = (event) => {
+    //     empty(event.currentTarget.id);
+    // };
 
-    const clonedChild = React.cloneElement(<Module/>);
+    // const newDuplicate = (event) => {
+    //     duplicate(event.currentTarget.id);
+    // };
 
   return (
     <>
-    <button onClick={event => clone()}>Click me</button>
-      {/* {clonedChild} */}
       <div className="god" id="god">
                 <div className="container" id="container1">
                     <div className="type">
@@ -104,86 +136,86 @@ const Module = () => {
 
                         <div className="extraextra">
                             <div className="extras">
-                                <img src="/images/visualiser/bin.png" id="binImg" className="clipboard" title="Clear" onClick={event => clear(event)}/>
-                                <img src="/images/visualiser/clipboard.png" id="clipboardImg" className="clipboard" title="Copy to Clipboard" onClick={event => copyText(event)}/>
+                                <img src="/images/visualiser/bin.png" id="binImg" className="clipboard" title="Clear" onClick={clear}/>
+                                <img src="/images/visualiser/clipboard.png" id="clipboardImg" className="clipboard" title="Copy to Clipboard" onClick={copyText}/>
                                 <div className="textModule">
-                                    <input className="textType textType1" id="textType1" maxLength="2" onKeyUp={event => read(event)}></input>
+                                    <input className="textType textType1" id="textType1" maxLength="2" value={type.textType1} onChange={changeType} />
                                     <input className="colon" placeholder=":" readOnly></input>
-                                    <input className="textType textType2" id="textType2" maxLength="3" onKeyUp={event => read(event)}></input>
+                                    <input className="textType textType2" id="textType2" maxLength="3" value={type.textType2} onChange={changeType} />
                                 </div>
-                                <img src="/images/visualiser/personsingle.png" id="singleImg" className="clipboard" title="Add Empty Bycode" onClick={event => newEmpty(event)}/>
+                                {/* <img src="/images/visualiser/personsingle.png" id="singleImg" className="clipboard" title="Add Empty Bycode" onClick={event => newEmpty(event)}/>
                                 <img src="/images/visualiser/personplus.png" id="plusImg" className="clipboard" title="Duplicate Bycode" onClick={event => newDuplicate(event)}/>
-                                <button id="mitchellButton" onClick={(event) => print(event)}>Test</button>
+                                <button id="mitchellButton" onClick={(event) => print(event)}>Test</button> */}
                             </div>
                             <div className="ops" id="ops">
-                                <input className="opsText" id="opsText" maxLength="16" onKeyUp={event => write(event)} placeholder="XX Xx/Xx XX/X(X)"></input>
+                                <input className="opsText" id="opsText" maxLength="16" onChange={changeType} value={type.opsType} placeholder="XX Xx/Xx XX/X(X)" />
                             </div>
                         </div>
-                        
+                        3
                         <div className="options">
                             <div className="leftModule">
                                 <label htmlFor="identifierModule">Observer</label>
-                                <input type="checkbox" id="identifierModule" onClick={event => passTo(event, "evaluatorModule")}/>
+                                <input type="checkbox" id="identifierModule" data-uncheck="evaluatorModule" checked={type.identifierModule} onChange={handleCheckboxChange}/>
                                 <br/>
                                 <br/>
                                 <label htmlFor="selfModule">Self</label>
-                                <input type="checkbox" id="selfModule" onClick={event => passTo(event, "othersModule")}/>
+                                <input type="checkbox" id="selfModule" data-uncheck="othersModule" checked={type.selfModule} onChange={handleCheckboxChange}/>
                                 <br/>
                                 <label htmlFor="knownModule">Known</label>
-                                <input type="checkbox" id="knownModule" onClick={event => passTo(event, "newsModule")}/>
+                                <input type="checkbox" id="knownModule" data-uncheck="newsModule" checked={type.knownModule} onChange={handleCheckboxChange}/>
                                 <br/>
                                 <br/>
                                 <label htmlFor="valueModule">Value</label>
-                                <input type="checkbox" id="valueModule" onClick={event => passTo(event, "reasonModule")}/>
+                                <input type="checkbox" id="valueModule" data-uncheck="reasonModule" checked={type.valueModule} onChange={handleCheckboxChange}/>
                                 <br/>
                                 <label htmlFor="abstractModule">Abstract</label>
-                                <input type="checkbox" id="abstractModule" onClick={event => passTo(event, "concreteModule")}/>
+                                <input type="checkbox" id="abstractModule" data-uncheck="concreteModule" checked={type.abstractModule} onChange={handleCheckboxChange}/>
                                 <br/>
                                 <br/>
                                 <label htmlFor="intermediateModule">Intermediate</label>
-                                <input type="checkbox" id="intermediateModule" onClick={event => passTo(event, "extremeModule")}/>
+                                <input type="checkbox" id="intermediateModule" data-uncheck="extremeModule" checked={type.intermediateModule} onChange={handleCheckboxChange}/>
                                 <br/>
                                 <label htmlFor="developerModule">Developer</label>
-                                <input type="checkbox" id="developerModule" onClick={event => passTo(event, "navigatorModule")}/>
+                                <input type="checkbox" id="developerModule" data-uncheck="navigatorModule" checked={type.developerModule} onChange={handleCheckboxChange}/>
                                 <br/>
                                 <br/>
                                 <label htmlFor="solidSelfModule">Solid Self</label>
-                                <input type="checkbox" id="solidSelfModule" onClick={event => passTo(event, "solidOthersModule")}/>
+                                <input type="checkbox" id="solidSelfModule" data-uncheck="solidOthersModule" checked={type.solidSelfModule} onChange={handleCheckboxChange}/>
                                 <br/>
                                 <label htmlFor="solidKnownModule">Solid Known</label>
-                                <input type="checkbox" id="solidKnownModule" onClick={event => passTo(event, "solidNewsModule")}/>
+                                <input type="checkbox" id="solidKnownModule" data-uncheck="solidNewsModule" checked={type.solidKnownModule} onChange={handleCheckboxChange}/>
                             </div>
                             
                             <div className="rightModule">
-                                <input type="checkbox" id="evaluatorModule" onClick={event => passTo(event, "identifierModule")}/>
+                                <input type="checkbox" id="evaluatorModule" data-uncheck="identifierModule" checked={type.evaluatorModule} onChange={handleCheckboxChange}/>
                                 <label htmlFor="evaluatorModule">Decider</label>
                                 <br/>
                                 <br/>
-                                <input type="checkbox" id="othersModule" onClick={event => passTo(event, "selfModule")}/>
+                                <input type="checkbox" id="othersModule" data-uncheck="selfModule" checked={type.othersModule} onChange={handleCheckboxChange}/>
                                 <label htmlFor="othersModule">Tribe</label>
                                 <br/>
-                                <input type="checkbox" id="newsModule" onClick={event => passTo(event, "knownModule")}/>
+                                <input type="checkbox" id="newsModule" data-uncheck="knownModule" checked={type.newsModule} onChange={handleCheckboxChange}/>
                                 <label htmlFor="newsModule">New</label>
                                 <br/>
                                 <br/>
-                                <input type="checkbox" id="reasonModule" onClick={event => passTo(event, "valueModule")}/>
+                                <input type="checkbox" id="reasonModule" data-uncheck="valueModule" checked={type.reasonModule} onChange={handleCheckboxChange}/>
                                 <label htmlFor="reasonModule">Reason</label>
                                 <br/>
-                                <input type="checkbox" id="concreteModule" onClick={event => passTo(event, "abstractModule")}/>
+                                <input type="checkbox" id="concreteModule" data-uncheck="abstractModule" checked={type.concreteModule} onChange={handleCheckboxChange}/>
                                 <label htmlFor="concreteModule">Concrete</label>
                                 <br/>
                                 <br/>
-                                <input type="checkbox" id="extremeModule" onClick={event => passTo(event, "intermediateModule")}/>
+                                <input type="checkbox" id="extremeModule" data-uncheck="intermediateModule" checked={type.extremeModule} onChange={handleCheckboxChange}/>
                                 <label htmlFor="extremeModule">Extreme</label>
                                 <br/>
-                                <input type="checkbox" id="navigatorModule" onClick={event => passTo(event, "developerModule")}/>
+                                <input type="checkbox" id="navigatorModule" data-uncheck="developerModule" checked={type.navigatorModule} onChange={handleCheckboxChange}/>
                                 <label htmlFor="navigatorModule">Navigator</label>
                                 <br/>
                                 <br/>
-                                <input type="checkbox" id="solidOthersModule" onClick={event => passTo(event, "solidSelfModule")}/>
+                                <input type="checkbox" id="solidOthersModule" data-uncheck="solidSelfModule" checked={type.solidOthersModule} onChange={handleCheckboxChange}/>
                                 <label htmlFor="solidOthersModule">Solid Others</label>
                                 <br/>
-                                <input type="checkbox" id="solidNewsModule" onClick={event => passTo(event, "solidKnownModule")}/>
+                                <input type="checkbox" id="solidNewsModule" data-uncheck="solidKnownModule" checked={type.solidNewsModule} onChange={handleCheckboxChange}/>
                                 <label htmlFor="solidNewsModule">Solid New</label>
                             </div>
                         </div>

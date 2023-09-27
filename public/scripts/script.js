@@ -1,4 +1,3 @@
-var a = 1
 
 
 function duplicate(n) {
@@ -51,8 +50,6 @@ function renameChildInitial(x,y) {
 		renameChildInitial(child,y)
 	}
 }
-
-renameChildInitial(container1,a.toString())
 
 
 function check(x) {
