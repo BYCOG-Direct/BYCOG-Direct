@@ -18,7 +18,9 @@ export default function Page() {
     return (
         <main>
         
-            <Module />
+            <div className="flex justify-center items-center flex-row flex-wrap" id="god">
+                <Module />
+            </div>
 
         </main>
     )
