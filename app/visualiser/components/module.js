@@ -610,13 +610,6 @@ const Module = () => {
                     <br/>
                     <label htmlFor="developerModule" className='text-[17px] mr-3'>Developer</label>
                     <input className='transition appearance-none w-5 h-5 border-2 border-black outline-none rounded-sm checked:bg-black checked:text-black align-middle' type="checkbox" id="developerModule" data-uncheck="navigatorModule" checked={type.developerModule} onChange={handleCheckboxChange}/>
-                    <br/>
-                    <br/>
-                    <label htmlFor="solidSelfModule" className='text-[17px] mr-3'>Solid Self</label>
-                    <input className='transition appearance-none w-5 h-5 border-2 border-black outline-none rounded-sm checked:bg-black checked:text-black align-middle' type="checkbox" id="solidSelfModule" data-uncheck="solidOthersModule" checked={type.solidSelfModule} onChange={handleCheckboxChange}/>
-                    <br/>
-                    <label htmlFor="solidKnownModule" className='text-[17px] mr-3'>Solid Known</label>
-                    <input className='transition appearance-none w-5 h-5 border-2 border-black outline-none rounded-sm checked:bg-black checked:text-black align-middle' type="checkbox" id="solidKnownModule" data-uncheck="solidNewsModule" checked={type.solidKnownModule} onChange={handleCheckboxChange}/>
                 </div>
                 
                 <div className="rightModule w-[150px] text-left pl-2 ml-2 border-l-[2px]">
@@ -643,13 +636,23 @@ const Module = () => {
                     <br/>
                     <input className='transition appearance-none w-5 h-5 border-2 border-black outline-none rounded-sm checked:bg-black checked:text-black align-middle' type="checkbox" id="navigatorModule" data-uncheck="developerModule" checked={type.navigatorModule} onChange={handleCheckboxChange}/>
                     <label htmlFor="navigatorModule" className='text-[17px] ml-3'>Navigator</label>
+                </div>
+            </div>
+            <div className="text-randPurp"> Stance Expansion</div>
+            <div className="options flex justify-center items-center flew-row relative mb-5">
+                <div className="leftModule w-[150px] text-right">
+                    <label htmlFor="solidSelfModule" className='text-[17px] mr-3 text-randPurp'>Solid Self</label>
+                    <input className='transition appearance-none w-5 h-5 border-2 border-randPurp outline-none rounded-sm checked:bg-randPurp checked:text-randPurp align-middle' type="checkbox" id="solidSelfModule" data-uncheck="solidOthersModule" checked={type.solidSelfModule} onChange={handleCheckboxChange}/>
                     <br/>
+                    <label htmlFor="solidKnownModule" className='text-[17px] mr-3 text-randPurp'>Solid Known</label>
+                    <input className='transition appearance-none w-5 h-5 border-2 border-randPurp outline-none rounded-sm checked:bg-randPurp checked:text-randPurp align-middle' type="checkbox" id="solidKnownModule" data-uncheck="solidNewsModule" checked={type.solidKnownModule} onChange={handleCheckboxChange}/>
+                </div>
+                <div className="rightModule w-[150px] text-left pl-2 ml-2 border-l-[2px] border-randPurp">
+                    <input className='transition appearance-none w-5 h-5 border-2 border-randPurp outline-none rounded-sm checked:bg-randPurp checked:text-randPurp align-middle'type="checkbox" id="solidOthersModule" data-uncheck="solidSelfModule" checked={type.solidOthersModule} onChange={handleCheckboxChange}/>
+                    <label htmlFor="solidOthersModule" className='text-[17px] ml-3 text-randPurp'>Solid Tribe</label>
                     <br/>
-                    <input className='transition appearance-none w-5 h-5 border-2 border-black outline-none rounded-sm checked:bg-black checked:text-black align-middle'type="checkbox" id="solidOthersModule" data-uncheck="solidSelfModule" checked={type.solidOthersModule} onChange={handleCheckboxChange}/>
-                    <label htmlFor="solidOthersModule" className='text-[17px] ml-3'>Solid Others</label>
-                    <br/>
-                    <input className='transition appearance-none w-5 h-5 border-2 border-black outline-none rounded-sm checked:bg-black checked:text-black align-middle' type="checkbox" id="solidNewsModule" data-uncheck="solidKnownModule" checked={type.solidNewsModule} onChange={handleCheckboxChange}/>
-                    <label htmlFor="solidNewsModule" className='text-[17px] ml-3'>Solid New</label>
+                    <input className='transition appearance-none w-5 h-5 border-2 border-randPurp outline-none rounded-sm checked:bg-randPurp checked:text-randPurp align-middle' type="checkbox" id="solidNewsModule" data-uncheck="solidKnownModule" checked={type.solidNewsModule} onChange={handleCheckboxChange}/>
+                    <label htmlFor="solidNewsModule" className='text-[17px] ml-3 text-randPurp'>Solid New</label>
                 </div>
             </div>
         </div>

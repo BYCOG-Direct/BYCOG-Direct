@@ -16,7 +16,8 @@ module.exports = {
         darkGray: '#323031',
         tan: '#D9D7D2',
         orange: '#e07a5f',
-        lightOrange: '#f2cc8f'
+        lightOrange: '#f2cc8f',
+        randPurp: '#8D4CB2'
       },
     },
   },
