@@ -48,18 +48,58 @@ const Module = () => {
             [counterpartBoxName]: false,            // Falsify the counterpart field
             [checkboxName]: event.target.checked,   // Trueify the current field
         });
-
     };
 
     useEffect(() => {
         drawModules();
+        drawReflexes();
     }, [type])
 
     const drawModules = () => {
         // Others, Self, New, Known
         const osnk = [0,0,0,0];
 
-        setCrossTetherStyle("opacity-[0] rotate-[0deg]")
+        // Reset display
+        setCrossTetherStyle("opacity-[0] rotate-[0deg]");
+        setDirectTetherStyle("opacity-0 rotate-[0deg]");
+        setConferTetherStyle("opacity-0 rotate-[90deg]");
+        setSearchTetherStyle("opacity-0 rotate-[180deg]");
+        setReviseTetherStyle("opacity-0 rotate-[270deg]");
+        
+        setKnownMainLetter("O");
+        setNewMainLetter("O");
+        setOthersMainLetter("D");
+        setSelfMainLetter("D");
+
+        // Colours & Letters!
+        if ((type['abstractModule'] && type['knownModule']) || (type['concreteModule'] && type['newsModule'])) {
+            setKnownMainLetter("A");
+            setNewMainLetter("C");
+
+            setKnownColour("bg-[#f2cc8f]");
+            setNewsColour("bg-[#81b29a]")
+        }
+        if ((type['abstractModule'] && type['newsModule']) || (type['concreteModule'] && type['knownModule'])) {
+            setKnownMainLetter("C");
+            setNewMainLetter("A");
+
+            setKnownColour("bg-[#81b29a]");
+            setNewsColour("bg-[#f2cc8f]")
+        }
+        if ((type['reasonModule'] && type['othersModule']) || (type['valueModule'] && type['selfModule'])) {
+            setOthersMainLetter("R");
+            setSelfMainLetter("V");
+
+            setOthersColour("bg-[#7078bf]");
+            setSelfColour("bg-[#e07a5f]")
+        }
+        if ((type['reasonModule'] && type['selfModule']) || (type['valueModule'] && type['othersModule'])) {
+            setOthersMainLetter("V");
+            setSelfMainLetter("R");
+
+            setOthersColour("bg-[#e07a5f]");
+            setSelfColour("bg-[#7078bf]")
+        }
         
         // Add numbers to osnk array depending on what is true/false in type!
 
@@ -67,11 +107,11 @@ const Module = () => {
         if (type['evaluatorModule']) {
             osnk[0] += 3;
             osnk[1] += 3;
-            setCrossTetherStyle("opacity-[1] rotate-[0deg]")
+            setCrossTetherStyle("opacity-[1] rotate-[90deg]")
         } else if (type['identifierModule']) {
             osnk[2] += 3;
             osnk[3] += 3;
-            setCrossTetherStyle("opacity-[1] rotate-[90deg]")
+            setCrossTetherStyle("opacity-[1] rotate-[0deg]")
         }
 
         // Others or Self
@@ -92,8 +132,6 @@ const Module = () => {
             osnk[2] -= 1;
         }
 
-        console.log(osnk);
-
         // Others styling, that is osnk[0]
         switch (osnk[0]) {
             case 4: // Major Hook
@@ -104,6 +142,7 @@ const Module = () => {
                 break;
             case 2: // Major Void
                 setOthersBorder("shadow-[0_0px_0px_23.8235px_rgba(0,0,0,1)] scale-[0.62963]");
+                setOthersColour("bg-[#D0D0D0]");
                 break;
             case 1: // Minor Hook
                 setOthersBorder("shadow-[0_0px_0px_23.8235px_rgba(0,0,0,1)] scale-[0.94444]");
@@ -111,12 +150,87 @@ const Module = () => {
 				// document.getElementById(toType.get(i)+"MainLetter"+n).style.scale = "1.058828";
 				// document.getElementById(toType.get(i)+"RightLetter"+n).style.scale = "1.058828";
                 break;
+            case 0: // Minor Void
             case -1: // Minor Void
                 setOthersBorder("shadow-[0_0px_0px_15px_rgba(0,0,0,1)] scale-[1]");
+                setOthersColour("bg-[#D0D0D0]");
                 break;
         } 
 
-        // Iterate through onsk and apply border and scale styling according to the value, e.g. 2 = Major void
+        // Self styling
+        switch (osnk[1]) {
+            case 4: // Major Hook
+                setSelfBorder("shadow-[0_0px_0px_17.11274px_rgba(0,0,0,1)] scale-[1.31481]");
+                break;
+            case 3: // Intermediate-stage Major Hook
+                setSelfBorder("shadow-[0_0px_0px_12.65625px_rgba(0,0,0,1)] scale-[1.185185185]");
+                break;
+            case 2: // Major Void
+                setSelfBorder("shadow-[0_0px_0px_23.8235px_rgba(0,0,0,1)] scale-[0.62963]");
+                setSelfColour("bg-[#D0D0D0]");
+                break;
+            case 1: // Minor Hook
+                setSelfBorder("shadow-[0_0px_0px_23.8235px_rgba(0,0,0,1)] scale-[0.94444]");
+                // document.getElementById(toType.get(i)+"LeftLetter"+n).style.scale = "1.058828";
+				// document.getElementById(toType.get(i)+"MainLetter"+n).style.scale = "1.058828";
+				// document.getElementById(toType.get(i)+"RightLetter"+n).style.scale = "1.058828";
+                break;
+            case 0: // Minor Void
+            case -1: // Minor Void
+                setSelfBorder("shadow-[0_0px_0px_15px_rgba(0,0,0,1)] scale-[1]");
+                setSelfColour("bg-[#D0D0D0]");
+                break;
+        } 
+
+        // New styling
+        switch (osnk[2]) {
+            case 4: // Major Hook
+                setNewBorder("shadow-[0_0px_0px_17.11274px_rgba(0,0,0,1)] scale-[1.31481]");
+                break;
+            case 3: // Intermediate-stage Major Hook
+                setNewBorder("shadow-[0_0px_0px_12.65625px_rgba(0,0,0,1)] scale-[1.185185185]");
+                break;
+            case 2: // Major Void
+                setNewBorder("shadow-[0_0px_0px_23.8235px_rgba(0,0,0,1)] scale-[0.62963]");
+                setNewsColour("bg-[#D0D0D0]");
+                break;
+            case 1: // Minor Hook
+                setNewBorder("shadow-[0_0px_0px_23.8235px_rgba(0,0,0,1)] scale-[0.94444]");
+                // document.getElementById(toType.get(i)+"LeftLetter"+n).style.scale = "1.058828";
+				// document.getElementById(toType.get(i)+"MainLetter"+n).style.scale = "1.058828";
+				// document.getElementById(toType.get(i)+"RightLetter"+n).style.scale = "1.058828";
+                break;
+            case 0: // Minor Void
+            case -1: // Minor Void
+                setNewBorder("shadow-[0_0px_0px_15px_rgba(0,0,0,1)] scale-[1]");
+                setNewsColour("bg-[#D0D0D0]");
+                break;
+        } 
+
+        // Known styling
+        switch (osnk[3]) {
+            case 4: // Major Hook
+                setKnownBorder("shadow-[0_0px_0px_17.11274px_rgba(0,0,0,1)] scale-[1.31481]");
+                break;
+            case 3: // Intermediate-stage Major Hook
+                setKnownBorder("shadow-[0_0px_0px_12.65625px_rgba(0,0,0,1)] scale-[1.185185185]");
+                break;
+            case 2: // Major Void
+                setKnownBorder("shadow-[0_0px_0px_23.8235px_rgba(0,0,0,1)] scale-[0.62963]");
+                setKnownColour("bg-[#D0D0D0]");
+                break;
+            case 1: // Minor Hook
+                setKnownBorder("shadow-[0_0px_0px_23.8235px_rgba(0,0,0,1)] scale-[0.94444]");
+                // document.getElementById(toType.get(i)+"LeftLetter"+n).style.scale = "1.058828";
+				// document.getElementById(toType.get(i)+"MainLetter"+n).style.scale = "1.058828";
+				// document.getElementById(toType.get(i)+"RightLetter"+n).style.scale = "1.058828";
+                break;
+            case 0: // Minor Void, will continue through
+            case -1: // Minor Void
+                setKnownBorder("shadow-[0_0px_0px_15px_rgba(0,0,0,1)] scale-[1]");
+                setKnownColour("bg-[#D0D0D0]");
+                break;
+        } 
 
         // Solid or Fluid
         if (type['solidOthersModule']) {
@@ -133,6 +247,173 @@ const Module = () => {
         } else if (type['solidKnownModule']) {
             setNewsLeftLetter("F");
             setKnownLeftLetter("S");
+        }
+
+        // Savage Tether
+        if (type['solidOthersModule'] && type['solidKnownModule']) {
+            setDirectTetherStyle("opacity-1 rotate-[0deg]");
+        }
+        if (type['solidOthersModule'] && type['solidNewsModule']) {
+            setConferTetherStyle("opacity-1 rotate-[90deg]");
+        }
+        if (type['solidSelfModule'] && type['solidNewsModule']) {
+            setSearchTetherStyle("opacity-1 rotate-[180deg]");
+        }
+        if (type['solidSelfModule'] && type['solidKnownModule']) {
+            setReviseTetherStyle("opacity-1 rotate-[270deg]");
+        }
+    }
+
+    const drawReflexes = () => {
+        // Direct Confer Search Revise
+        const csrd = [0,0,0,0];
+
+        if (type['othersModule'] && type['newsModule']) {
+            csrd[0] += 4; // Confer
+        } else if (type['newsModule'] && type['selfModule']) {
+            csrd[1] += 4; // Seek
+        } else if (type['selfModule'] && type['knownModule']) {
+            csrd[2] += 4; // Revise
+        } else if (type['knownModule'] && type['othersModule']) {
+            csrd[3] += 4; // Direct
+        }
+    
+        if (type['developerModule']) {
+            csrd[2] += 1; // Revise
+            csrd[0] += 1; // Confer
+        } else if (type['navigatorModule']) {
+            csrd[1] += 1; // Seek
+            csrd[3] += 1; // Direct
+        }
+    
+        if (type['extremeModule']) {
+            if (type['selfModule']) {
+                csrd[2] += 2; // Revise
+                csrd[1] += 2; // Seek
+            } else if (type['othersModule']) {
+                csrd[0] += 2; // Confer
+                csrd[3] += 2; // Direct
+            }
+        } else if (type['intermediateModule']) {
+            if (type['knownModule']) {
+                csrd[2] += 2; // Revise
+                csrd[3] += 2; // Direct
+            } else if (type['newsModule']) {
+                csrd[0] += 2; // Confer
+                csrd[1] += 2; // Seek
+            }
+        }
+
+        // Simplify array into numbers 0 through 3
+        for (let i = 0; i < 4;i++) {
+            if (csrd[i] == 3) {
+                csrd[i] = 2;
+            }
+            if (csrd[i] > 3) {
+                csrd[i] = 3;
+            }
+        }
+
+        // Confer styling
+        switch (csrd[0]) {
+            case 0: // Invisible
+                setConferBorder("shadow-[0_0px_0px_15px_rgba(255,255,255,1)]");
+                break;
+            case 1: // 
+                setConferBorder("shadow-[0_0px_0px_22.5px_rgba(255,255,255,1),0_0px_0px_37.5px_rgba(0,0,0,1)]");
+                break;
+            case 2: // 
+                setConferBorder("shadow-[0_0px_0px_15px_rgba(255,255,255,1),0_0px_0px_45px_rgba(0,0,0,1)]");
+                break;
+            case 3: // 
+                setConferBorder("shadow-[0_0px_0px_7.5px_rgba(255,255,255,1),0_0px_0px_52.5px_rgba(0,0,0,1)]");
+                break;
+        } 
+
+        // Search styling
+        switch (csrd[1]) {
+            case 0: // Invisible
+                setSearchBorder("shadow-[0_0px_0px_15px_rgba(255,255,255,1)]");
+                break;
+            case 1: // 
+                setSearchBorder("shadow-[0_0px_0px_22.5px_rgba(255,255,255,1),0_0px_0px_37.5px_rgba(0,0,0,1)]");
+                break;
+            case 2: // 
+                setSearchBorder("shadow-[0_0px_0px_15px_rgba(255,255,255,1),0_0px_0px_45px_rgba(0,0,0,1)]");
+                break;
+            case 3: // 
+                setSearchBorder("shadow-[0_0px_0px_7.5px_rgba(255,255,255,1),0_0px_0px_52.5px_rgba(0,0,0,1)]");
+                break;
+        } 
+
+        // Revise styling
+        switch (csrd[2]) {
+            case 0: // Invisible
+                setReviseBorder("shadow-[0_0px_0px_15px_rgba(255,255,255,1)]");
+                break;
+            case 1: // 
+                setReviseBorder("shadow-[0_0px_0px_22.5px_rgba(255,255,255,1),0_0px_0px_37.5px_rgba(0,0,0,1)]");
+                break;
+            case 2: // 
+                setReviseBorder("shadow-[0_0px_0px_15px_rgba(255,255,255,1),0_0px_0px_45px_rgba(0,0,0,1)]");
+                break;
+            case 3: // 
+                setReviseBorder("shadow-[0_0px_0px_7.5px_rgba(255,255,255,1),0_0px_0px_52.5px_rgba(0,0,0,1)]");
+                break;
+        } 
+
+        // Direct styling
+        switch (csrd[3]) {
+            case 0: // Invisible
+                setDirectBorder("shadow-[0_0px_0px_15px_rgba(255,255,255,1)]");
+                break;
+            case 1: // 
+                setDirectBorder("shadow-[0_0px_0px_22.5px_rgba(255,255,255,1),0_0px_0px_37.5px_rgba(0,0,0,1)]");
+                break;
+            case 2: // 
+                setDirectBorder("shadow-[0_0px_0px_15px_rgba(255,255,255,1),0_0px_0px_45px_rgba(0,0,0,1)]");
+                break;
+            case 3: // 
+                setDirectBorder("shadow-[0_0px_0px_7.5px_rgba(255,255,255,1),0_0px_0px_52.5px_rgba(0,0,0,1)]");
+                break;
+        } 
+
+        // Draw double activated reflex.
+        if ((csrd[0]+csrd[1]+csrd[2]+csrd[3]) == 6) {
+            // Revise
+            if (csrd[0] == 0) {
+                setReviseBorder("shadow-[0_0px_0px_7.5px_rgba(255,255,255,1),0_0px_0px_22.5px_rgba(0,0,0,1),0_0px_0px_37.5px_rgba(255,255,255,1),0_0px_0px_52.5px_rgba(0,0,0,1)]")
+            }
+            // Direct
+            if (csrd[1] == 0) {
+                setDirectBorder("shadow-[0_0px_0px_7.5px_rgba(255,255,255,1),0_0px_0px_22.5px_rgba(0,0,0,1),0_0px_0px_37.5px_rgba(255,255,255,1),0_0px_0px_52.5px_rgba(0,0,0,1)]")
+            }
+            // Confer
+            if (csrd[2] == 0) {
+                setConferBorder("shadow-[0_0px_0px_7.5px_rgba(255,255,255,1),0_0px_0px_22.5px_rgba(0,0,0,1),0_0px_0px_37.5px_rgba(255,255,255,1),0_0px_0px_52.5px_rgba(0,0,0,1)]")
+            }
+            // Search
+            if (csrd[3] == 0) {
+                setSearchBorder("shadow-[0_0px_0px_7.5px_rgba(255,255,255,1),0_0px_0px_22.5px_rgba(0,0,0,1),0_0px_0px_37.5px_rgba(255,255,255,1),0_0px_0px_52.5px_rgba(0,0,0,1)]")
+            }
+
+            // But what about if they are also the biggest reflex?
+            // Revise
+            if (csrd[0] == 0 && csrd[2] == 3) {
+                setReviseBorder("shadow-[0_0px_0px_20px_rgba(0,0,0,1),0_0px_0px_40px_rgba(255,255,255,1),0_0px_0px_60px_rgba(0,0,0,1)]")
+            }
+            // Direct
+            if (csrd[1] == 0 && csrd[3] == 3) {
+                setDirectBorder("shadow-[0_0px_0px_20px_rgba(0,0,0,1),0_0px_0px_40px_rgba(255,255,255,1),0_0px_0px_60px_rgba(0,0,0,1)]")
+            }
+            // Confer
+            if (csrd[2] == 0 && csrd[0] == 3) {
+                setConferBorder("shadow-[0_0px_0px_20px_rgba(0,0,0,1),0_0px_0px_40px_rgba(255,255,255,1),0_0px_0px_60px_rgba(0,0,0,1)]")
+            }
+            // Search
+            if (csrd[3] == 0 && csrd[1] == 3) {
+                setSearchBorder("shadow-[0_0px_0px_20px_rgba(0,0,0,1),0_0px_0px_40px_rgba(255,255,255,1),0_0px_0px_60px_rgba(0,0,0,1)]")
+            }
         }
     }
 
@@ -157,24 +438,45 @@ const Module = () => {
     const [newsLeftLetter, setNewsLeftLetter] = useState("?");
     const [knownLeftLetter, setKnownLeftLetter] = useState("?");
 
+    // Module Colours Dynamic Styles
+    const [othersColour, setOthersColour] = useState("bg-[#D0D0D0]");
+    const [selfColour, setSelfColour] = useState("bg-[#D0D0D0]");
+    const [newsColour, setNewsColour] = useState("bg-[#D0D0D0]");
+    const [knownColour, setKnownColour] = useState("bg-[#D0D0D0]");
+
+    // Module Letters Dynamic Data
+    const [othersMainLetter, setOthersMainLetter] = useState("D");
+    const [selfMainLetter, setSelfMainLetter] = useState("D");
+    const [newMainLetter, setNewMainLetter] = useState("O");
+    const [knownMainLetter, setKnownMainLetter] = useState("O");
+
     // Reflex Dynamic Styles
     const defaultReflexBorder = "shadow-[0_0px_0px_15px_rgba(255,255,255,1)]";
+    const [conferBorder,setConferBorder] = useState(defaultReflexBorder);
+    const [searchBorder,setSearchBorder] = useState(defaultReflexBorder);
+    const [reviseBorder,setReviseBorder] = useState(defaultReflexBorder);
     const [directBorder,setDirectBorder] = useState(defaultReflexBorder);
 
     // Tether Dynamic Styles
     const [crossTetherStyle,setCrossTetherStyle] = useState("opacity-0")
-    const [savageTetherStyle,setSavageTetherStyle] = useState("opacity-0")
+    const [directTetherStyle,setDirectTetherStyle] = useState("opacity-0 rotate-[0deg]")
+    const [conferTetherStyle,setConferTetherStyle] = useState("opacity-0 rotate-[90deg]")
+    const [searchTetherStyle,setSearchTetherStyle] = useState("opacity-0 rotate-[180deg]")
+    const [reviseTetherStyle,setReviseTetherStyle] = useState("opacity-0 rotate-[270deg]")
 
     // Static Styles
     const letterHost = "flex justify-center items-center flex-row flex-wrap rotate-[-45deg] transition duration-300 ease-in-out";
-    const others = "absolute top-[-67.5px] left-[132.5px] w-[135px] h-[135px] rotate-[45deg] bg-[#D0D0D0]";
-    const self = "absolute top-[332.5px] left-[132.5px] w-[135px] h-[135px] rotate-[45deg] bg-[#D0D0D0]";
-    const news = "absolute top-[132.5px] left-[332.5px] w-[135px] h-[135px] rotate-[45deg] bg-[#D0D0D0]";
-    const known = "absolute top-[132.5px] left-[-67.5px] w-[135px] h-[135px] rotate-[45deg] bg-[#D0D0D0]";
+    const others = "absolute top-[-67.5px] left-[132.5px] w-[135px] h-[135px] rotate-[45deg]";
+    const self = "absolute top-[332.5px] left-[132.5px] w-[135px] h-[135px] rotate-[45deg]";
+    const news = "absolute top-[132.5px] left-[332.5px] w-[135px] h-[135px] rotate-[45deg]";
+    const known = "absolute top-[132.5px] left-[-67.5px] w-[135px] h-[135px] rotate-[45deg]";
 
     const middleCover = "absolute top-[37.5px] left-[37.5px] w-[325px] h-[325px] z-[-1] bg-[#FFF]";
 
-    const direct = "absolute top-[30px] left-[30px] w-[140px] h-[140px] z-[-2]";
+    const confer = "absolute top-[30px] right-[30px] w-[140px] h-[140px] z-[-2] transition duration-300 ease-in-out";
+    const search = "absolute bottom-[30px] right-[30px] w-[140px] h-[140px] z-[-2] transition duration-300 ease-in-out";
+    const revise = "absolute bottom-[30px] left-[30px] w-[140px] h-[140px] z-[-2] transition duration-300 ease-in-out";
+    const direct = "absolute top-[30px] left-[30px] w-[140px] h-[140px] z-[-2] transition duration-300 ease-in-out";
 
     const left = "text-[41.06px] font-bold text-black";
     const main = "text-[82.12px] font-bold text-black";
@@ -214,7 +516,10 @@ const Module = () => {
                 
                 {/* The cross tethers */}
                 <img src="/images/visualiser/main.png" className={`${tetherStyle} ${crossTetherStyle}`} id="crossTethers"/>
-                <img src="/images/visualiser/sub.png" className={`${tetherStyle} ${savageTetherStyle}`} id="savageTethers"/>
+                <img src="/images/visualiser/sub.png" className={`${tetherStyle} ${directTetherStyle}`}/>
+                <img src="/images/visualiser/sub.png" className={`${tetherStyle} ${conferTetherStyle}`}/>
+                <img src="/images/visualiser/sub.png" className={`${tetherStyle} ${searchTetherStyle}`}/>
+                <img src="/images/visualiser/sub.png" className={`${tetherStyle} ${reviseTetherStyle}`}/>
 
                 {/* The arrow that exenuates your lead function */}
                 <div className="othersArrow" id="othersArrow"></div>
@@ -223,34 +528,34 @@ const Module = () => {
                 <div className="knownArrow" id="knownArrow"></div>
                 
                 {/* The four functions. Each is rotated 45 degrees, and then the internals are rotated back 45 degrees so that the square is rotated but the text isn't. */}
-                <div className={`${othersBorder} ${others} ${letterHost}`} id="others">
+                <div className={`${othersBorder} ${others} ${othersColour} ${letterHost}`} id="others">
                     <div className={letterHost}>
                         <p className={left} id="othersLeftLetter">{othersLeftLetter}</p>
-                        <p className={main} id="othersMainLetter">D</p>
+                        <p className={main} id="othersMainLetter">{othersMainLetter}</p>
                         <p className={right} id="othersRightLetter">E</p>
                     </div>
                 </div>
 
-                <div className={`${newsBorder} ${news} ${letterHost}`} id="news">
+                <div className={`${newsBorder} ${news} ${newsColour} ${letterHost}`} id="news">
                     <div className={letterHost}>
                         <p className={left} id="newsLeftLetter">{newsLeftLetter}</p>
-                        <p className={main} id="newsMainLetter">O</p>
+                        <p className={main} id="newsMainLetter">{newMainLetter}</p>
                         <p className={right} id="newsRightLetter">E</p>
                     </div>
                 </div>
 
-                <div className={`${selfBorder} ${self} ${letterHost}`} id="self">
+                <div className={`${selfBorder} ${self} ${selfColour} ${letterHost}`} id="self">
                     <div className={letterHost}>
                         <p className={left} id="selfLeftLetter">{selfLeftLetter}</p>
-                        <p className={main} id="selfMainLetter">D</p>
+                        <p className={main} id="selfMainLetter">{selfMainLetter}</p>
                         <p className={right} id="selfRightLetter">I</p>
                     </div>
                 </div>
 
-                <div className={`${knownBorder} ${known} ${letterHost}`} id="known">
+                <div className={`${knownBorder} ${known} ${knownColour} ${letterHost}`} id="known">
                     <div className={letterHost}>
                         <p className={left} id="knownLeftLetter">{knownLeftLetter}</p>
-                        <p className={main} id="knownMainLetter">O</p>
+                        <p className={main} id="knownMainLetter">{knownMainLetter}</p>
                         <p className={right} id="knownRightLetter">I</p>
                     </div>
                 </div>
@@ -260,9 +565,9 @@ const Module = () => {
 
                 {/* The reflex lines */}
                 <div className={`${directBorder} ${direct}`} id="direct"></div>
-                <div className="conferLine" id="confer"></div>
-                <div className="seekLine" id="seek"></div>
-                <div className="reviseLine" id="revise"></div>
+                <div className={`${conferBorder} ${confer}`}  id="confer"></div>
+                <div className={`${searchBorder} ${search}`}  id="search"></div>
+                <div className={`${reviseBorder} ${revise}`}  id="revise"></div>
             </div>
 
             <div className='mt-4'>
@@ -280,7 +585,7 @@ const Module = () => {
                 </div>
             </div>
                 
-            <div className="options flex justify-center items-center flew-row relative mb-10">
+            <div className="options flex justify-center items-center flew-row relative mb-5">
                 <div className="leftModule w-[150px] text-right">
                     <label htmlFor="identifierModule" className='text-[17px] mr-3'>Identifier</label>
                     <input className='transition appearance-none w-5 h-5 border-2 border-black outline-none rounded-sm checked:bg-black checked:text-black align-middle' type="checkbox" id="identifierModule" data-uncheck="evaluatorModule" checked={type.identifierModule} onChange={handleCheckboxChange}/>
@@ -350,7 +655,7 @@ const Module = () => {
         </div>
         
         <div className="text-sm mb-10 w-3/4 mx-auto text-center">
-            All web design, coding and functionality is Copyright © Divydation 2023. All rights reserved. The design and imagery of the Tilewheel is Copyright © Loglyn 2023. All rights reserved. 
+            All web design, coding and functionality is Copyright © Divydation & Sectonic 2023. All rights reserved. The design and imagery of the Tilewheel is Copyright © Loglyn 2023. All rights reserved. 
         </div>
     </div>
   );
