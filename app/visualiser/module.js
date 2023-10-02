@@ -54,7 +54,7 @@ const Module = ({ index, type, styles, setType, setStyles, deleteModule, duplica
 
     const tetherStyle = "absolute w-[1000px] h-[1000px] max-w-none left-[-300px] top-[-300px]  transition duration-300 ease-in-out";
     const checkboxStyle = "transition appearance-none w-5 h-5 border-2 border-black outline-none rounded-sm checked:bg-black checked:text-black align-middle";
-    const purpleCheckboxStyle = "transition appearance-none w-5 h-5 border-2 border-randPurp outline-none rounded-sm checked:bg-randPurp checked:text-randPurp align-middle";
+    const purpleCheckboxStyle = "transition appearance-none w-5 h-5 border-2 border-[#5161F2] outline-none rounded-sm checked:bg-[#5161F2] checked:text-[#5161F2] align-middle";
 
     // Clear type / Reset to empty type
     const clear = () => {
@@ -72,7 +72,7 @@ const Module = ({ index, type, styles, setType, setStyles, deleteModule, duplica
 
     // Copy bycode to clipboard
     const copyText = () => {
-        navigator.clipboard.writeText(`${textType1}:${textType2}`);
+        navigator.clipboard.writeText(`${textType1.value}:${textType2.value}`);
     };
 
   return (
@@ -209,21 +209,21 @@ const Module = ({ index, type, styles, setType, setStyles, deleteModule, duplica
                 <label htmlFor="navigatorModule" className='text-[17px] ml-3'>Navigator</label>
             </div>
         </div>
-        <div className="text-randPurp"> Stance Expansion</div>
+        <div className="text-[#5161F2]"> Stance Expansion</div>
         <div className="options flex justify-center items-center flew-row relative mb-5">
             <div className="leftModule w-[150px] text-right">
-                <label htmlFor="solidSelfModule" className='text-[17px] mr-3 text-randPurp'>Solid Self</label>
+                <label htmlFor="solidSelfModule" className='text-[17px] mr-3 text-[#5161F2]'>Solid Self</label>
                 <input className={purpleCheckboxStyle} type="checkbox" id="solidSelfModule" data-uncheck="solidOthersModule" checked={type.solidSelfModule} onChange={handleCheckboxChange}/>
                 <br/>
-                <label htmlFor="solidKnownModule" className='text-[17px] mr-3 text-randPurp'>Solid Known</label>
+                <label htmlFor="solidKnownModule" className='text-[17px] mr-3 text-[#5161F2]'>Solid Known</label>
                 <input className={purpleCheckboxStyle} type="checkbox" id="solidKnownModule" data-uncheck="solidNewsModule" checked={type.solidKnownModule} onChange={handleCheckboxChange}/>
             </div>
-            <div className="rightModule w-[150px] text-left pl-2 ml-2 border-l-[2px] border-randPurp">
+            <div className="rightModule w-[150px] text-left pl-2 ml-2 border-l-[2px] text-[#5161F2]">
                 <input className={purpleCheckboxStyle}type="checkbox" id="solidOthersModule" data-uncheck="solidSelfModule" checked={type.solidOthersModule} onChange={handleCheckboxChange}/>
-                <label htmlFor="solidOthersModule" className='text-[17px] ml-3 text-randPurp'>Solid Tribe</label>
+                <label htmlFor="solidOthersModule" className='text-[17px] ml-3 text-[#5161F2]'>Solid Tribe</label>
                 <br/>
                 <input className={purpleCheckboxStyle} type="checkbox" id="solidNewsModule" data-uncheck="solidKnownModule" checked={type.solidNewsModule} onChange={handleCheckboxChange}/>
-                <label htmlFor="solidNewsModule" className='text-[17px] ml-3 text-randPurp'>Solid New</label>
+                <label htmlFor="solidNewsModule" className='text-[17px] ml-3 text-[#5161F2]'>Solid New</label>
             </div>
         </div>
     </div>

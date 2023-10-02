@@ -319,27 +319,37 @@ export const drawDiagram = (type, styles) => {
         });
     }
 
+    // This variable is used for determining which letter of the bycode reflexes is capitalised
+    var capitalReflex = "";
+
     // Savage Tether
     if (type.solidOthersModule && type.solidKnownModule) {
         changeNewStyles({
             directTetherStyle: "opacity-1 rotate-[0deg]",
         });
+        capitalReflex = "d";
     }
     if (type.solidOthersModule && type.solidNewsModule) {
         changeNewStyles({
             conferTetherStyle: "opacity-1 rotate-[90deg]",
         });
+        capitalReflex = "c";
     }
     if (type.solidSelfModule && type.solidNewsModule) {
         changeNewStyles({
             searchTetherStyle: "opacity-1 rotate-[180deg]",
         });
+        capitalReflex = "s";
     }
     if (type.solidSelfModule && type.solidKnownModule) {
         changeNewStyles({
             reviseTetherStyle: "opacity-1 rotate-[270deg]",
         });
+        capitalReflex = "r";
     }
+
+
+    // Reflex styling
 
     if (type.othersModule && type.newsModule) {
         csrd[0] += 4; // Confer
@@ -556,6 +566,53 @@ export const drawDiagram = (type, styles) => {
             });
         }
     }
+
+    // Write the type in the left text box
+    let leftTextBox = ["",""];
+    let evaluatorLetter = "";
+    let identifierLetter = "";
+    if (type.valueModule) {
+        evaluatorLetter = "v";
+    }
+    if (type.reasonModule) {
+        evaluatorLetter = "r";
+    }
+    if (type.concreteModule) {
+        identifierLetter = "c";
+    }
+    if (type.abstractModule) {
+        identifierLetter = "a";
+    }
+    if (type.evaluatorModule) {
+        leftTextBox[0] = evaluatorLetter.toUpperCase();
+        leftTextBox[1] = identifierLetter;
+    }
+    if (type.identifierModule) {
+        leftTextBox[0] = identifierLetter.toUpperCase();
+        leftTextBox[1] = evaluatorLetter;
+    }
+    type.textType1 = leftTextBox[0] + leftTextBox[1];
+
+    // Write the type in the right text box
+    var rightTextBox = ["","",""];
+    let csrdReference = ["c","s","r","d"];
+
+    for (let i=0;i<4;i++) { // Loop from csrd[0] to csrd[3]
+        for (let k=1;k<4;k++) { // Loop for k=0, k=1, k=2
+            if (csrd[i] == k) { // Compare the value. 
+                rightTextBox[3-k] = csrdReference[i]; // If confer is the highest (3) then it will be placed in the first array slot of rightTextBox
+            }
+        }
+    };
+
+    // Capitalise the solid reflex letter if it can be found...
+    for (let i=0;i<3;i++) {
+        if (rightTextBox[i] == capitalReflex) {
+            rightTextBox[i] = rightTextBox[i].toUpperCase();
+        }
+    }
+
+    type.textType2 = rightTextBox[0] + rightTextBox[1] + rightTextBox[2];
 
     return newStyles;
 }
