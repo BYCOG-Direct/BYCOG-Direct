@@ -229,6 +229,38 @@ export const drawDiagram = (type, styles) => {
             break;
     }
 
+    // New styling
+    switch (osnk[2]) {
+        case 4: // Major Hook
+            changeNewStyles({
+                newsBorder: "shadow-[0_0px_0px_17.11274px_rgba(0,0,0,1)] scale-[1.31481]",
+            });
+            break;
+        case 3: // Intermediate-stage Major Hook
+            changeNewStyles({
+                newsBorder: "shadow-[0_0px_0px_12.65625px_rgba(0,0,0,1)] scale-[1.185185185]",
+            });
+            break;
+        case 2: // Major Void
+            changeNewStyles({
+                newsBorder: "shadow-[0_0px_0px_23.8235px_rgba(0,0,0,1)] scale-[0.62963]",
+                newsColour: "bg-[#D0D0D0]",
+            });
+            break;
+        case 1: // Minor Hook
+            changeNewStyles({
+                newsBorder: "shadow-[0_0px_0px_23.8235px_rgba(0,0,0,1)] scale-[0.94444]",
+            });
+            break;
+        case 0: // Minor Void, will continue through
+        case -1: // Minor Void
+            changeNewStyles({
+                newsBorder: "shadow-[0_0px_0px_15px_rgba(0,0,0,1)] scale-[1]",
+                newsColour: "bg-[#D0D0D0]",
+            });
+            break;
+    }
+
     
     // Known styling
     switch (osnk[3]) {
