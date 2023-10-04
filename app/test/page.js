@@ -104,13 +104,13 @@ export default function Page() {
       Re += V_R;
     }
 
-    // Calculate Vi, Ve, Ri, Re based on A_C
+    // Calculate Ci, Ce, Ai, Ae based on A_C
     if (A_C < 0) {
-      Vi += -A_C;
-      Ve += -A_C;
+      Ai += -A_C;
+      Ae += -A_C;
     } else if (A_C > 0) {
-      Ri += A_C;
-      Re += A_C;
+      Ci += A_C;
+      Ce += A_C;
     }
 
     // Calculate Vi, Re, Ri, Ve based on ViRe
@@ -416,7 +416,7 @@ export default function Page() {
                 Submit
                 </button>
             </div>
-            <div className="flex flex-row justify-center content-center text-8xl">
+            <div className="flex flex-row justify-center content-center text-8xl m-auto">
                 {variable1}{variable2}:{variable3}
             </div>
 
