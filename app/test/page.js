@@ -203,7 +203,7 @@ export default function Page() {
         calculatedVariable3 = 'r';
     } 
     // Check if Ve or Re is bigger than Vi and Ri, and Ce or Ae is bigger than Ci and Ai
-    else if (Math.max(Ve,Re) > Math.max(Vi,Ri) && (Math.max(Ce,Ae) > Math.max(i,Ai))) {
+    else if (Math.max(Ve,Re) > Math.max(Vi,Ri) && (Math.max(Ce,Ae) > Math.max(Ci,Ai))) {
         calculatedVariable3 = 'c';
     } 
     // If none of the above conditions are met, assign 's' to calculatedVariable3
