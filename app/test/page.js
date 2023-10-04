@@ -194,17 +194,16 @@ export default function Page() {
     console.log("calculatedVariable2:", calculatedVariable2);
 
     let calculatedVariable3;
-    // Replace Vi, Ri, Ve, and Re with your actual variables 
     // Check if Ve or Re is bigger than Vi and Ri, and Ci or Ai is bigger than Ce and Ae
-    if ((Ve >= Vi || Re >= Ri) && (Ci >= Ce || Ai >= Ae)) {
+    if (Math.max(Ve,Re) > Math.max(Vi,Ri) && (Math.max(Ci,Ai) > Math.max(Ce,Ae))) {
         calculatedVariable3 = 'd';
     } 
     // Check if Vi or Ri is bigger than Ve and Re, and Ci or Ai is bigger than Ce and Ae
-    else if ((Vi >= Ve || Ri >= Re) && (Ci >= Ce || Ai >= Ae)) {
+    else if (Math.max(Vi,Ri) > Math.max(Ve,Re) && (Math.max(Ci,Ai) > Math.max(Ce,Ae))) {
         calculatedVariable3 = 'r';
     } 
     // Check if Ve or Re is bigger than Vi and Ri, and Ce or Ae is bigger than Ci and Ai
-    else if ((Ve >= Vi || Re >= Ri) && (Ce >= Ci || Ae >= Ai)) {
+    else if (Math.max(Ve,Re) > Math.max(Vi,Ri) && (Math.max(Ce,Ae) > Math.max(i,Ai))) {
         calculatedVariable3 = 'c';
     } 
     // If none of the above conditions are met, assign 's' to calculatedVariable3
@@ -356,7 +355,7 @@ export default function Page() {
                     <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
                     When you explain topics to others do you:
                     <div className="flex flex-row justify-center content-center items-center">
-                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">start with the point</div>
+                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">present with clear separations</div>
                         <SliderCustomStyles id="sliderQ15" name="Q15" setResponses={setResponses}/> 
                         <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">jump from one topic to another</div>
                     </div></p>
