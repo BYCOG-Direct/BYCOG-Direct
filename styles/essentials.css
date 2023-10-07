@@ -207,7 +207,7 @@ a:link, a:visited {
 	justify-content: space-evenly;
 	align-content: center;
 	width: calc(500px + 14vw);
-	flexwrap: nowrap;
+	flex-wrap: nowrap;
 }
 
 .wordBoxes0 {

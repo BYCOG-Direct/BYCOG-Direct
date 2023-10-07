@@ -1,6 +1,4 @@
-var a = 1
 
-document.getElementById("god").setAttribute("onclick","alert('blah');");
 
 function duplicate(n) {
 	console.log(n);
@@ -52,8 +50,6 @@ function renameChildInitial(x,y) {
 		renameChildInitial(child,y)
 	}
 }
-
-renameChildInitial(container1,a.toString())
 
 
 function check(x) {
