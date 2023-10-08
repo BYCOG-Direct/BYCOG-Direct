@@ -16,7 +16,7 @@ export default function Home() {
       <TestSuggest />
 
       <div className='py-10 text-center max-w-[750px] mx-auto'>
-        <p>Below each person’s likes, dislikes, decision making and personality is a	process they impulsively use all the time.</p>
+        <p>Below each person's likes, dislikes, decision making and personality is a process they impulsively use all the time.</p>
         <p>We call these processes bycodes.</p>
       </div>
 
