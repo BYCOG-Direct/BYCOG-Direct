@@ -241,11 +241,11 @@ export default function Page() {
                 <div id="flex flex-col justify-evenly content-center flex-nowrap w-[calc(32rem+1/6)]">
                     
                     <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
-                    More often, do you:
+                    More often, do you struggle:
                     <div className="flex flex-row justify-center content-center items-center">
-                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">balance what others want and what you want</div>
+                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">balancing security and exploration</div>
                         <SliderCustomStyles id="sliderQ01" name="Q01" setResponses={setResponses}/> 
-                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">balance preventing possiblities and exploring possiblities</div>
+                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">balancing what others want and what you want</div>
                     </div></p>
 
                     <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
@@ -265,15 +265,15 @@ export default function Page() {
                     </div></p>
 
                     <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
-                    After making a tough decisions, are you more likely to regret:
+                    Completing a task, are you more likely to:
                     <div className="flex flex-row justify-center content-center items-center">
-                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">not figuring out how it will work soon enough</div>
+                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">dismissing how it is done; do what makes people happy</div>
                         <SliderCustomStyles id="sliderQ04" name="Q04" setResponses={setResponses}/> 
-                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">not doing the right thing</div>
+                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">dismissing how people feel about; do what is best for them</div>
                     </div></p>
 
                     <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
-                    when you are solving a problem, do you try to first:
+                    when you are solving a problem, do you first:
                     <div className="flex flex-row justify-center content-center items-center">
                         <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">find what has happened before</div>
                         <SliderCustomStyles id="sliderQ05" name="Q05" setResponses={setResponses}/> 
@@ -281,9 +281,9 @@ export default function Page() {
                     </div></p>
 
                     <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
-                    Do you find yourself more often:
+                    Would you say your life has changed more from:
                     <div className="flex flex-row justify-center content-center items-center">
-                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">holding a grudge against someone</div>
+                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">an interpersonal conflict</div>
                         <SliderCustomStyles id="sliderQ06" name="Q06" setResponses={setResponses}/> 
                         <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">realising you missed an essential piece of information</div>
                     </div></p>
@@ -293,7 +293,7 @@ export default function Page() {
                     <div className="flex flex-row justify-center content-center items-center">
                         <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">are deeply rooted in your individual values</div>
                         <SliderCustomStyles id="sliderQ07" name="Q07" setResponses={setResponses}/> 
-                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">stem from a sense of responsibility towards harmony</div>
+                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">come from a responsibility towards harmony</div>
                     </div></p>
 
                     <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
@@ -307,7 +307,7 @@ export default function Page() {
                     <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
                     Do you find yourself more often:
                     <div className="flex flex-row justify-center content-center items-center">
-                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">alienating others opinions and perspectives</div>
+                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">oblivious to others opinions and perspectives</div>
                         <SliderCustomStyles id="sliderQ09" name="Q09" setResponses={setResponses}/> 
                         <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">referencing others opinions and perspectives</div>
                     </div></p>
@@ -321,11 +321,11 @@ export default function Page() {
                     </div></p>
 
                     <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
-                    Reflecting on yourself, do you have big swings between:
+                    Reflecting on yourself, do you have big leaps between:
                     <div className="flex flex-row justify-center content-center items-center">
-                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">sacrificing for others and distancing yourself</div>
+                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">either sacrificing for others & disengaging from them</div>
                         <SliderCustomStyles id="sliderQ11" name="Q11" setResponses={setResponses}/> 
-                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">having control over your life and the unexpected happening to you</div>
+                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">either controlling your life & unexpected events happening to you</div>
                     </div></p>
 
                     <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
@@ -347,7 +347,7 @@ export default function Page() {
                     <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
                     Are you more comfortable:
                     <div className="flex flex-row justify-center content-center items-center">
-                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">being confident in your own desires</div>
+                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">knowing and forming your own opinions</div>
                         <SliderCustomStyles id="sliderQ14" name="Q14" setResponses={setResponses}/> 
                         <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">involving others in your decision-making process</div>
                     </div></p>
@@ -365,7 +365,7 @@ export default function Page() {
                     <div className="flex flex-row justify-center content-center items-center">
                         <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">finding the information you have been missing</div>
                         <SliderCustomStyles id="sliderQ16" name="Q16" setResponses={setResponses}/> 
-                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">resolving interpersonal conflicts</div>
+                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">resolving disagreements with others</div>
                     </div></p>
 
                     <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
@@ -403,7 +403,7 @@ export default function Page() {
                     <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
                     Are you more inclined to focus on:
                     <div className="flex flex-row justify-center content-center items-center">
-                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">things, facts, and information</div>
+                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">things, information, and worldviews</div>
                         <SliderCustomStyles id="sliderQ21" name="Q21" setResponses={setResponses}/> 
                         <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">people, fairness, and interpersonal dynamics</div>
                     </div></p>

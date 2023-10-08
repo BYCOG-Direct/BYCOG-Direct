@@ -158,7 +158,7 @@ const Module = ({ index, type, styles, setType, setStyles, deleteModule, duplica
             
         <div className="options flex justify-center items-center flew-row relative mb-5">
             <div className="leftModule w-[150px] text-right">
-                <label htmlFor="identifierModule" className='text-[17px] mr-3'>Identifier</label>
+                <label htmlFor="identifierModule" className='text-[17px] mr-3'>Observer</label>
                 <input className={checkboxStyle} type="checkbox" id="identifierModule" data-uncheck="evaluatorModule" checked={type.identifierModule} onChange={handleCheckboxChange}/>
                 <br/>
                 <br/>
@@ -185,7 +185,7 @@ const Module = ({ index, type, styles, setType, setStyles, deleteModule, duplica
             
             <div className="rightModule w-[150px] text-left pl-2 ml-2 border-l-[2px]">
                 <input className={checkboxStyle} type="checkbox" id="evaluatorModule" data-uncheck="identifierModule" checked={type.evaluatorModule} onChange={handleCheckboxChange}/>
-                <label htmlFor="evaluatorModule" className='text-[17px] ml-3'>Evaluator</label>
+                <label htmlFor="evaluatorModule" className='text-[17px] ml-3'>Decider</label>
                 <br/>
                 <br/>
                 <input className={checkboxStyle} type="checkbox" id="othersModule" data-uncheck="selfModule" checked={type.othersModule} onChange={handleCheckboxChange}/>
