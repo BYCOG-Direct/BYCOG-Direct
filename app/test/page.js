@@ -15,7 +15,7 @@ export function SliderCustomStyles({ id, name, setResponses, responses }) {
         }));
     };
   
-    const defaultValue = responses && responses[name] !== undefined ? responses[name] + 50 : 50;
+    const defaultValue = responses.hasOwnProperty(name) ? responses[name] + 50 : 50;
 
     return (
       <div className="w-96">
@@ -264,7 +264,7 @@ export default function Page() {
                         More often, do you struggle:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">balancing what others want and what you want</div>
-                            <SliderCustomStyles id="sliderQ01" name="Q01" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ01" name="Q01" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">balancing security and exploration</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
@@ -272,7 +272,7 @@ export default function Page() {
                         Are you more often:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">struggling to see what others want</div>
-                            <SliderCustomStyles id="sliderQ02" name="Q02" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ02" name="Q02" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">over aware of what others want</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
@@ -280,7 +280,7 @@ export default function Page() {
                         When you encounter a new challenge do you more often:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">Stick to what you know first</div>
-                            <SliderCustomStyles id="sliderQ03" name="Q03" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ03" name="Q03" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">try something different</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
@@ -288,7 +288,7 @@ export default function Page() {
                         Completing a task, are you more likely to:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">dismissing how it is done; do what makes people happy</div>
-                            <SliderCustomStyles id="sliderQ04" name="Q04" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ04" name="Q04" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">dismissing how people feel about; do what is best for them</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
@@ -296,7 +296,7 @@ export default function Page() {
                         when you are solving a problem, do you first:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">find what has happened before</div>
-                            <SliderCustomStyles id="sliderQ05" name="Q05" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ05" name="Q05" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">guess what will happen next</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
@@ -304,7 +304,7 @@ export default function Page() {
                         Would you say your life has changed more from:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">realising you missed an essential piece of information</div>
-                            <SliderCustomStyles id="sliderQ06" name="Q06" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ06" name="Q06" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">relationship trouble</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
@@ -312,7 +312,7 @@ export default function Page() {
                         Do you find that your principles of right and wrong:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">are deeply rooted in your individual values</div>
-                            <SliderCustomStyles id="sliderQ07" name="Q07" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ07" name="Q07" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">come from a responsibility towards harmony</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
@@ -331,7 +331,7 @@ export default function Page() {
                         When observing the world, are you more likely to:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">work with your experiences to make sense of reality</div>
-                            <SliderCustomStyles id="sliderQ08" name="Q08" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ08" name="Q08" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">be skeptical of your context, exploring different viewpoints</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
@@ -339,7 +339,7 @@ export default function Page() {
                         Do you find yourself more often:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">oblivious to others opinions and perspectives</div>
-                            <SliderCustomStyles id="sliderQ09" name="Q09" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ09" name="Q09" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">referencing others opinions and perspectives</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
@@ -347,7 +347,7 @@ export default function Page() {
                         Are you more likely to:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">conclude and eliminate</div>
-                            <SliderCustomStyles id="sliderQ10" name="Q10" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ10" name="Q10" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">embrace new experiences</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
@@ -355,7 +355,7 @@ export default function Page() {
                         Reflecting on yourself, do you have big leaps between:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">either controlling your life & unexpected events happening to you</div>
-                            <SliderCustomStyles id="sliderQ11" name="Q11" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ11" name="Q11" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">either sacrificing for others & disengaging from them</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
@@ -363,7 +363,7 @@ export default function Page() {
                         When you were younger, were you pulled towards:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">what you found significant</div>
-                            <SliderCustomStyles id="sliderQ12" name="Q12" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ12" name="Q12" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">how things work</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
@@ -371,7 +371,7 @@ export default function Page() {
                         When you explain topics to others do you:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">start with the point</div>
-                            <SliderCustomStyles id="sliderQ13" name="Q13" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ13" name="Q13" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">build up to the conclusion with facts</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
@@ -379,7 +379,7 @@ export default function Page() {
                         Are you more comfortable:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">knowing and forming your own opinions</div>
-                            <SliderCustomStyles id="sliderQ14" name="Q14" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ14" name="Q14" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">involving others in your decision-making process</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
@@ -398,7 +398,7 @@ export default function Page() {
                         When you explain topics out loud to people do you:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">present with clear separations</div>
-                            <SliderCustomStyles id="sliderQ15" name="Q15" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ15" name="Q15" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">jump from one topic to another</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
@@ -406,7 +406,7 @@ export default function Page() {
                         Do you feel more relief:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">finding the information you have been missing</div>
-                            <SliderCustomStyles id="sliderQ16" name="Q16" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ16" name="Q16" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">resolving disagreements with others</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
@@ -414,7 +414,7 @@ export default function Page() {
                         When making decisions do you more often:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">prioritize your personal standards and what you want</div>
-                            <SliderCustomStyles id="sliderQ17" name="Q17" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ17" name="Q17" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">seek input from others, consider their opinions</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
@@ -422,7 +422,7 @@ export default function Page() {
                         Is your gut reaction to new experiences:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">contempt</div>
-                            <SliderCustomStyles id="sliderQ18" name="Q18" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ18" name="Q18" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">excitement</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
@@ -430,7 +430,7 @@ export default function Page() {
                         In decision-making, do you lean towards:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">practicality in the solution</div>
-                            <SliderCustomStyles id="sliderQ19" name="Q19" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ19" name="Q19" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">ensuring logical consistency</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
@@ -438,7 +438,7 @@ export default function Page() {
                         When faced with a challenging problem, do you usually:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">focus on finding a core solution that simplifies the issue</div>
-                            <SliderCustomStyles id="sliderQ20" name="Q20" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ20" name="Q20" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">delve into the intricacies of the problem, considering multiple facets</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
@@ -446,7 +446,7 @@ export default function Page() {
                         Are you more inclined to focus on:
                         <div className="flex flex-row justify-center content-center items-center">
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">things, information, and worldviews</div>
-                            <SliderCustomStyles id="sliderQ21" name="Q21" setResponses={setResponses}/> 
+                            <SliderCustomStyles id="sliderQ21" name="Q21" setResponses={setResponses} responses={responses}/> 
                             <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">people, fairness, and interpersonal dynamics</div>
                         </div></p>
                         <hr class="h-px my-7 border-0 bg-black"></hr>
