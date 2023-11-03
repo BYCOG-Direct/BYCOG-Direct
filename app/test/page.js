@@ -243,9 +243,9 @@ export default function Page() {
                     <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
                     More often, do you struggle:
                     <div className="flex flex-row justify-center content-center items-center">
-                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">balancing security and exploration</div>
-                        <SliderCustomStyles id="sliderQ01" name="Q01" setResponses={setResponses}/> 
                         <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">balancing what others want and what you want</div>
+                        <SliderCustomStyles id="sliderQ01" name="Q01" setResponses={setResponses}/> 
+                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">balancing security and exploration</div>
                     </div></p>
 
                     <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
@@ -283,9 +283,9 @@ export default function Page() {
                     <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
                     Would you say your life has changed more from:
                     <div className="flex flex-row justify-center content-center items-center">
-                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">an interpersonal conflict</div>
-                        <SliderCustomStyles id="sliderQ06" name="Q06" setResponses={setResponses}/> 
                         <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">realising you missed an essential piece of information</div>
+                        <SliderCustomStyles id="sliderQ06" name="Q06" setResponses={setResponses}/> 
+                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">relationship trouble</div>
                     </div></p>
 
                     <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
@@ -323,15 +323,15 @@ export default function Page() {
                     <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
                     Reflecting on yourself, do you have big leaps between:
                     <div className="flex flex-row justify-center content-center items-center">
-                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">either sacrificing for others & disengaging from them</div>
-                        <SliderCustomStyles id="sliderQ11" name="Q11" setResponses={setResponses}/> 
                         <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">either controlling your life & unexpected events happening to you</div>
+                        <SliderCustomStyles id="sliderQ11" name="Q11" setResponses={setResponses}/> 
+                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">either sacrificing for others & disengaging from them</div>
                     </div></p>
 
                     <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
                     When you were younger, were you pulled towards:
                     <div className="flex flex-row justify-center content-center items-center">
-                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">what you found emotionally significant</div>
+                        <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">what you found significant</div>
                         <SliderCustomStyles id="sliderQ12" name="Q12" setResponses={setResponses}/> 
                         <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">how things work</div>
                     </div></p>
@@ -353,7 +353,7 @@ export default function Page() {
                     </div></p>
 
                     <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
-                    When you explain topics to others do you:
+                    When you explain topics out loud to people do you:
                     <div className="flex flex-row justify-center content-center items-center">
                         <div className="text-2xl mb-1 p-1 max-w-[275px] mx-auto">present with clear separations</div>
                         <SliderCustomStyles id="sliderQ15" name="Q15" setResponses={setResponses}/> 
