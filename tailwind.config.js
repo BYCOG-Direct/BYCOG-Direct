@@ -1,3 +1,5 @@
+import { Lexend } from 'next/font/google'
+
 /** @type {import('tailwindcss').Config} */
 
 const withMT = require("@material-tailwind/react/utils/withMT");
@@ -22,6 +24,9 @@ module.exports = withMT({
         lightOrange: '#f2cc8f',
         randPurp: '#8D4CB2'
       },
+    },
+    fontFamily: {
+      sans: [Lexend], 
     },
   },
   plugins: [],
