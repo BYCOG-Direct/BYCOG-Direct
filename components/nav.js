@@ -30,8 +30,8 @@ const Nav = () => {
         <div className={color ? "duration-500 bg-darkGray fixed flex justify-center gap-2 items-center py-3 px-3 right-20 top-7 z-20 rounded-full" : "duration-150 bg-gray shadow-xl fixed flex justify-center gap-2 items-center py-3 px-3 right-20 top-5 z-20 rounded-full"}>
             <div className="flex justify-center divide-x-2 divide-tan text-white text-center font-light text-xl">
                 <Link href="/" className="py-1 px-3 hover:text-tan">Home</Link>
-                <Link href="/database" className="py-1 px-3 hover:text-tan">Database</Link>
-                <Link href="/courses/essentials" className="py-1 px-3 hover:text-tan">Courses</Link>
+                <Link href="/index" className="py-1 px-3 hover:text-tan">Index</Link>
+                <Link href="/learn/essentials" className="py-1 px-3 hover:text-tan">Learn</Link>
                 <Link href="/visualiser" className="py-1 pl-3 pr-1.5 hover:text-tan">Tools</Link>
             </div>
             <Link href="/profile">
