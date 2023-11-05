@@ -63,12 +63,12 @@ const Nav = () => {
           navHeight 
           // Top of screen nav bar closed
           ? (displayLongNav 
-            ? "lg:hidden transition-all duration-500 bg-darkGray fixed flex justify-center gap-2 items-center p-3 mx-5 my-6 right-0 z-50 rounded-tl-full rounded-tr-full rounded-br-full rounded-bl-full"
-            : "lg:hidden transition-all duration-500 bg-gray shadow-xl fixed flex justify-center gap-2 items-center p-8 m-0 right-0 z-50 rounded-tl-none rounded-tr-none rounded-br-none rounded-bl-[56px]")
+            ? "lg:hidden transition-all duration-500 bg-darkGray fixed flex justify-center gap-2 items-center p-3 mx-5 my-6 right-0 z-50 rounded-full"
+            : "lg:hidden transition-all duration-500 bg-gray shadow-xl fixed flex justify-center gap-2 items-center p-8 m-0 right-0 z-50 rounded-full rounded-t-none")
           // Top of screen nav bar Open
           : (displayLongNav 
-            ? "lg:hidden transition-all duration-150 bg-gray shadow-xl fixed flex justify-center gap-2 items-center p-3 m-5 right-0 z-50 rounded-tl-full rounded-tr-full rounded-br-full rounded-bl-full"
-            : "lg:hidden transition-all duration-500 bg-gray shadow-xl fixed flex justify-center gap-2 items-center p-8 m-0 right-0 z-50 rounded-tl-none rounded-tr-none rounded-br-none rounded-bl-[56px]") 
+            ? "lg:hidden transition-all duration-150 bg-gray shadow-xl fixed flex justify-center gap-2 items-center p-3 m-5 right-0 z-50 rounded-full"
+            : "lg:hidden transition-all duration-500 bg-gray shadow-xl fixed flex justify-center gap-2 items-center p-8 m-0 right-0 z-50 rounded-full rounded-t-none") 
         }>
           <div className={
             displayLongNav
