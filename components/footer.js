@@ -3,7 +3,7 @@ import Link from 'next/link';
 const Footer = () => {
     return (
         <div className="bg-darkGray p-12 text-tan">
-            <div className='w-1/2 mx-auto grid grid-cols-5 gap-7'>
+            <div className='w-1/2 mx-auto grid lg:grid-cols-5 gap-7 justify-center'>
                 <div className='flex flex-col gap-2 justify-start items-end'>
                     <div className='text-xl'>Contact</div>
                     <Link href="" className='text-[16px] font-light mr-2 hover:border-b border-tan max-w-max'>Email</Link>
@@ -11,7 +11,7 @@ const Footer = () => {
                     <Link href="" className='text-[16px] font-light mr-2 hover:border-b border-tan max-w-max'>Discord</Link>
                     <Link href="" className='text-[16px] font-light mr-2 hover:border-b border-tan max-w-max'>Github</Link>
                 </div>
-                <div className='col-span-3 text-center'>
+                <div className='order-last lg:order-none col-span-3 text-center'>
                     <div className='text-xl ml-1'>About Us</div>
                     <div className='mt-3 text-sm font-light ml-2'>
                         BYCOG Direct is a behavioural taxonomy and is not accepted or recognised in psychology or neuroscience. 
@@ -23,10 +23,10 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='flex flex-col gap-2'>
-                    <div className='text-xl ml-1'>Pages</div>
-                    <Link href="/" className='text-[16px] font-light ml-2 hover:border-b border-tan max-w-max'>Home</Link>
-                    <Link href="/index" className='text-[16px] font-light ml-2 hover:border-b border-tan max-w-max'>Index</Link>
-                    <Link href="/learn" className='text-[16px] font-light ml-2 hover:border-b border-tan max-w-max'>Learn</Link>
+                    <div className=' text-xl ml-1'>Pages</div>
+                    <Link href="/" className=' text-[16px] font-light ml-2 hover:border-b border-tan max-w-max'>Home</Link>
+                    <Link href="/index" className=' text-[16px] font-light ml-2 hover:border-b border-tan max-w-max'>Index</Link>
+                    <Link href="/learn" className=' text-[16px] font-light ml-2 hover:border-b border-tan max-w-max'>Learn</Link>
                     <Link href="/visualiser" className='text-[16px] font-light ml-2 hover:border-b border-tan max-w-max'>Tools</Link>
                 </div>
             </div>
