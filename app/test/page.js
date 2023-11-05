@@ -244,256 +244,327 @@ export default function Page() {
     return (
         <main>
             <div className="flex flex-row justify-center content-center">
-                <div className="bg-darkGray h-32 w-screen">
-                    <div className="flex flex-row text-center"> 
-                        <img src="/images/BYCOG_Direct_Logo.png" className="w-auto h-12 m-9 transition"/>
-                        <p className="text-white mt-10 text-4xl">Your Free Test</p>
+                <div className="bg-darkGray flex w-screen">
+                    <div className="flex flex-col md:flex-row text-center"> 
+                        <img src="/images/BYCOG_Direct_Logo.png" className="w-[205.02px] h-12 mt-9 ml-9 md:m-9 transition"/>
+                        <div className="flex flex-col place-content-center w-screen md:w-auto"> 
+                            <p className="text-white text-3xl my-3">Your Free Test</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div className="flex flex-row justify-center content-center text-8xl mb-7">
-                <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
+                <p className="text-center text-base lg:text-2xl mt-10 px-10 max-w-[1000px] mx-auto">
                 Answer honestly about yourself; try to reflect on your actions and how you behaved when you were younger. Focus on the trends of your life, rather than specific events.
                 </p>
             </div>
             
-            <div className="flex flex-row justify-center content-center">
+            <div className="flex flex-row justify-center content-center text-base lg:text-2xl">
                 {/* Conditional rendering based on the current set */}
 
                 {currentSet === 1 && (
                     // Render questions 1-7
-                    <div id="flex flex-col justify-evenly content-center">
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 mx-auto">
+                    <div class="flex flex-col justify-evenly content-center overflow-hidden">
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5 mx-auto">
                         More often, do you struggle:
                         <div className="flex flex-col lg:flex-row items-center justify-center">
-                            <div className="flex flex-row mx-auto mb-4">
-                                <div className="max-w-[275px] lg:w-[275px] text-2xl mb-1 p-1">balancing what others want and what you want</div>
-                                <div className="lg:hidden mx-7 my-3 border-0 w-px h-auto bg-black"></div>
-                                <div className="max-w-[275px] lg:w-[275px] lg:hidden text-2xl mb-1 p-1">balancing security and exploration</div>
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">balancing what others want and what you want</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 px-4">balancing security and exploration</div>
                             </div>
                             <SliderCustomStyles name="Q01" setResponses={setResponses} responses={responses}/> 
-                            <div className="hidden lg:inline-block text-2xl mb-1 p-1 w-[275px] mx-auto">balancing security and exploration</div>
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">balancing security and exploration</div>
                         </div>
                         </p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 mx-auto">
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5 mx-auto">
                         Are you more often:
                         <div className="flex flex-col lg:flex-row items-center justify-center">
-                            <div className="flex flex-row mx-auto mb-4">
-                                <div className="max-w-[275px] lg:w-[275px] text-2xl mb-1 p-1">struggling to see what others want</div>
-                                <div className="lg:hidden mx-7 my-3 border-0 w-px h-auto bg-black"></div>
-                                <div className="max-w-[275px] lg:w-[275px] lg:hidden text-2xl mb-1 p-1">over aware of what others want</div>
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">struggling to see what others want</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 py-1 px-4">over aware of what others want</div>
                             </div>
                             <SliderCustomStyles name="Q02" setResponses={setResponses} responses={responses}/> 
-                            <div className="hidden lg:inline-block text-2xl mb-1 p-1 w-[275px] mx-auto">over aware of what others want</div>
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">over aware of what others want</div>
                         </div>
                         </p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 mx-auto">
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5 mx-auto">
                         When you encounter a new challenge do you more often:
                         <div className="flex flex-col lg:flex-row items-center justify-center">
-                            <div className="flex flex-row mx-auto mb-4">
-                                <div className="max-w-[275px] lg:w-[275px] text-2xl mb-1 p-1">stick to what you know first</div>
-                                <div className="lg:hidden mx-7 my-3 border-0 w-px h-auto bg-black"></div>
-                                <div className="max-w-[275px] lg:w-[275px] lg:hidden text-2xl mb-1 p-1">try something different</div>
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">stick to what you know first</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 py-1 px-4">try something different</div>
                             </div>
                             <SliderCustomStyles name="Q03" setResponses={setResponses} responses={responses}/> 
-                            <div className="hidden lg:inline-block text-2xl mb-1 p-1 w-[275px] mx-auto">try something different</div>
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">try something different</div>
                         </div>
                         </p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 mx-auto">
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5 mx-auto">
                         Completing a task, are you more likely to:
                         <div className="flex flex-col lg:flex-row items-center justify-center">
-                            <div className="flex flex-row mx-auto mb-4">
-                                <div className="max-w-[275px] lg:w-[275px] text-2xl mb-1 p-1">dismissing how it is done; do what makes people happy</div>
-                                <div className="lg:hidden mx-7 my-3 border-0 w-px h-auto bg-black"></div>
-                                <div className="max-w-[275px] lg:w-[275px] lg:hidden text-2xl mb-1 p-1">dismissing how people feel about; do what is best for them</div>
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">dismissing how it is done; do what makes people happy</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 py-1 px-4">dismissing how people feel about; do what is best for them</div>
                             </div>
                             <SliderCustomStyles name="Q02" setResponses={setResponses} responses={responses}/> 
-                            <div className="hidden lg:inline-block text-2xl mb-1 p-1 w-[275px] mx-auto">dismissing how people feel about; do what is best for them</div>
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">dismissing how people feel about; do what is best for them</div>
                         </div>
                         </p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 mx-auto">
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5 mx-auto">
                         When you are solving a problem, do you first:
                         <div className="flex flex-col lg:flex-row items-center justify-center">
-                            <div className="flex flex-row mx-auto mb-4">
-                                <div className="max-w-[275px] lg:w-[275px] text-2xl mb-1 p-1">find what has happened before</div>
-                                <div className="lg:hidden mx-7 my-3 border-0 w-px h-auto bg-black"></div>
-                                <div className="max-w-[275px] lg:w-[275px] lg:hidden text-2xl mb-1 p-1">guess what will happen next</div>
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">find what has happened before</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 py-1 px-4">guess what will happen next</div>
                             </div>
                             <SliderCustomStyles name="Q05" setResponses={setResponses} responses={responses}/> 
-                            <div className="hidden lg:inline-block text-2xl mb-1 p-1 w-[275px] mx-auto">guess what will happen next</div>
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">guess what will happen next</div>
                         </div>
                         </p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 mx-auto">
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5 mx-auto">
                         Would you say your life has changed more from:
                         <div className="flex flex-col lg:flex-row items-center justify-center">
-                            <div className="flex flex-row mx-auto mb-4">
-                                <div className="max-w-[275px] lg:w-[275px] text-2xl mb-1 p-1">realising you missed an essential piece of information</div>
-                                <div className="lg:hidden mx-7 my-3 border-0 w-px h-auto bg-black"></div>
-                                <div className="max-w-[275px] lg:w-[275px] lg:hidden text-2xl mb-1 p-1">relationship trouble</div>
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">realising you missed an essential piece of information</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 py-1 px-4">a social feud with other people</div>
                             </div>
                             <SliderCustomStyles name="Q06" setResponses={setResponses} responses={responses}/> 
-                            <div className="hidden lg:inline-block text-2xl mb-1 p-1 w-[275px] mx-auto">relationship trouble</div>
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">a social feud with other people</div>
                         </div>
                         </p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 mx-auto">
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5 mx-auto">
                         Do you find that your principles of right and wrong:
                         <div className="flex flex-col lg:flex-row items-center justify-center">
-                            <div className="flex flex-row mx-auto mb-4">
-                                <div className="max-w-[275px] lg:w-[275px] text-2xl mb-1 p-1">are deeply rooted in your individual values</div>
-                                <div className="lg:hidden mx-7 my-3 border-0 w-px h-auto bg-black"></div>
-                                <div className="max-w-[275px] lg:w-[275px] lg:hidden text-2xl mb-1 p-1">come from a responsibility towards harmony</div>
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">are deeply rooted in your individual values</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 py-1 px-4">come from a responsibility towards harmony</div>
                             </div>
                             <SliderCustomStyles name="Q07" setResponses={setResponses} responses={responses}/> 
-                            <div className="hidden lg:inline-block text-2xl mb-1 p-1 w-[275px] mx-auto">come from a responsibility towards harmony</div>
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">come from a responsibility towards harmony</div>
                         </div>
                         </p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
                         <div className="flex flex-row justify-center content-center">
-                            
-                            <Link href="/" className='flex'><Button variant="outlined" className="text-2xl mx-4 font-light rounded-full normal-case">Home</Button></Link>
-                            <button onClick={() => { handleNextSet(); scrollToTop(); }}><Button variant="outlined" className="text-2xl mx-4 font-light rounded-full normal-case">Next</Button></button>
+                            <Link href="/" className='flex'><Button variant="outlined" className="text-2xl mx-4 my-7 font-light rounded-full normal-case">Home</Button></Link>
+                            <button onClick={() => { handleNextSet(); scrollToTop(); }}><Button variant="outlined" className="text-2xl mx-4 my-7 font-light rounded-full normal-case">Next</Button></button>
                         </div>
                     </div>
                 )}
 
                 {currentSet === 2 && (
                     // Render questions 8-14
-                    <div id="flex flex-col justify-evenly content-center flex-nowrap w-[calc(32rem+1/6)]"> 
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
+                    <div className="flex flex-col justify-evenly content-center overflow-hidden">
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5">
                         When observing the world, are you more likely to:
-                        <div className="flex flex-row justify-center content-center items-center">
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">work with your experiences to make sense of reality</div>
+                        <div className="flex flex-col lg:flex-row items-center justify-center">
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">work with your experiences to make sense of reality</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 px-4">be skeptical of your context, exploring different viewpoints</div>
+                            </div>
                             <SliderCustomStyles name="Q08" setResponses={setResponses} responses={responses}/> 
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">be skeptical of your context, exploring different viewpoints</div>
-                        </div></p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">be skeptical of your context, exploring different viewpoints</div>
+                        </div>
+                        </p>
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5">
                         Do you find yourself more often:
-                        <div className="flex flex-row justify-center content-center items-center">
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">oblivious to others opinions and perspectives</div>
+                        <div className="flex flex-col lg:flex-row items-center justify-center">
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">oblivious to others opinions and perspectives</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 px-4">referencing others opinions and perspectives</div>
+                            </div>
                             <SliderCustomStyles name="Q09" setResponses={setResponses} responses={responses}/> 
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">referencing others opinions and perspectives</div>
-                        </div></p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">referencing others opinions and perspectives</div>
+                        </div>
+                        </p>
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5">
                         Are you more likely to:
-                        <div className="flex flex-row justify-center content-center items-center">
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">conclude and eliminate</div>
+                        <div className="flex flex-col lg:flex-row items-center justify-center">
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">eliminate potential options</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 px-4">embrace new experiences</div>
+                            </div>
                             <SliderCustomStyles name="Q10" setResponses={setResponses} responses={responses}/> 
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">embrace new experiences</div>
-                        </div></p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">embrace new experiences</div>
+                        </div>
+                        </p>
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5">
                         Reflecting on yourself, do you have big leaps between:
-                        <div className="flex flex-row justify-center content-center items-center">
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">either controlling your life & unexpected events happening to you</div>
+                        <div className="flex flex-col lg:flex-row items-center justify-center">
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">either controlling your life & unexpected events happening to you</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 px-4">either sacrificing for others & disengaging from them</div>
+                            </div>
                             <SliderCustomStyles name="Q11" setResponses={setResponses} responses={responses}/> 
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">either sacrificing for others & disengaging from them</div>
-                        </div></p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">either sacrificing for others & disengaging from them</div>
+                        </div>
+                        </p>
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5">
                         When you were younger, were you pulled towards:
-                        <div className="flex flex-row justify-center content-center items-center">
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">what you found significant</div>
+                        <div className="flex flex-col lg:flex-row items-center justify-center">
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">what you found significant</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 px-4">how things work</div>
+                            </div>
                             <SliderCustomStyles name="Q12" setResponses={setResponses} responses={responses}/> 
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">how things work</div>
-                        </div></p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">how things work</div>
+                        </div>
+                        </p>
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5">
                         When you explain topics to others do you:
-                        <div className="flex flex-row justify-center content-center items-center">
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">start with the point</div>
+                        <div className="flex flex-col lg:flex-row items-center justify-center">
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">start with the point</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 px-4">build up to the conclusion with facts</div>
+                            </div>
                             <SliderCustomStyles name="Q13" setResponses={setResponses} responses={responses}/> 
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">build up to the conclusion with facts</div>
-                        </div></p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">build up to the conclusion with facts</div>
+                        </div>
+                        </p>
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5">
                         Are you more comfortable:
-                        <div className="flex flex-row justify-center content-center items-center">
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">knowing and forming your own opinions</div>
+                        <div className="flex flex-col lg:flex-row items-center justify-center">
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">knowing and forming your own opinions</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 px-4">involving others in your decision-making process</div>
+                            </div>
                             <SliderCustomStyles name="Q14" setResponses={setResponses} responses={responses}/> 
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">involving others in your decision-making process</div>
-                        </div></p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">involving others in your decision-making process</div>
+                        </div>
+                        </p>
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
                         <div className="flex flex-row justify-center content-center">
-                            <button onClick={() => { handlePreviousSet(); scrollToTop(); }}><Button variant="outlined" className="text-2xl mx-4 font-light rounded-full normal-case">Back</Button></button>
-                            <button onClick={() => { handleNextSet(); scrollToTop(); }}><Button variant="outlined" className="text-2xl mx-4 font-light rounded-full normal-case">Next</Button></button>
+                            <button onClick={() => { handlePreviousSet(); scrollToTop(); }}><Button variant="outlined" className="text-2xl mx-4 my-7 font-light rounded-full normal-case">Back</Button></button>
+                            <button onClick={() => { handleNextSet(); scrollToTop(); }}><Button variant="outlined" className="text-2xl mx-4 my-7 font-light rounded-full normal-case">Next</Button></button>
                         </div>
                     </div>
                 )}
 
                 {currentSet === 3 && (
                     // Render questions 15-21
-                    <div id="flex flex-col justify-evenly content-center flex-nowrap w-[calc(32rem+1/6)]">
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
+                    <div className="flex flex-col justify-evenly content-center overflow-hidden">
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5 mx-auto">
                         When you explain topics out loud to people do you:
-                        <div className="flex flex-row justify-center content-center items-center">
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">present with clear separations</div>
+                        <div className="flex flex-col lg:flex-row items-center justify-center">
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">present with clear separations</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 px-4">jump from one topic to another</div>
+                            </div>
                             <SliderCustomStyles name="Q15" setResponses={setResponses} responses={responses}/> 
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">jump from one topic to another</div>
-                        </div></p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">jump from one topic to another</div>
+                        </div>
+                        </p>
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5 mx-auto">
                         Do you feel more relief:
-                        <div className="flex flex-row justify-center content-center items-center">
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">finding the information you have been missing</div>
+                        <div className="flex flex-col lg:flex-row items-center justify-center">
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">finding the information you have been missing</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 px-4">resolving disagreements with others</div>
+                            </div>
                             <SliderCustomStyles name="Q16" setResponses={setResponses} responses={responses}/> 
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">resolving disagreements with others</div>
-                        </div></p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">resolving disagreements with others</div>
+                        </div>
+                        </p>
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5 mx-auto">
                         When making decisions do you more often:
-                        <div className="flex flex-row justify-center content-center items-center">
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">prioritize your personal standards and what you want</div>
+                        <div className="flex flex-col lg:flex-row items-center justify-center">
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">prioritize your personal standards and what you want</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 px-4">seek input from others, consider their opinions</div>
+                            </div>
                             <SliderCustomStyles name="Q17" setResponses={setResponses} responses={responses}/> 
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">seek input from others, consider their opinions</div>
-                        </div></p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">seek input from others, consider their opinions</div>
+                        </div>
+                        </p>
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5 mx-auto">
                         Is your gut reaction to new experiences:
-                        <div className="flex flex-row justify-center content-center items-center">
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">contempt</div>
+                        <div className="flex flex-col lg:flex-row items-center justify-center">
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">contempt</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 px-4">excitement</div>
+                            </div>
                             <SliderCustomStyles name="Q18" setResponses={setResponses} responses={responses}/> 
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">excitement</div>
-                        </div></p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">excitement</div>
+                        </div>
+                        </p>
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5 mx-auto">
                         In decision-making, do you lean towards:
-                        <div className="flex flex-row justify-center content-center items-center">
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">practicality in the solution</div>
+                        <div className="flex flex-col lg:flex-row items-center justify-center">
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">practicality in the solution</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 px-4">ensuring logical consistency</div>
+                            </div>
                             <SliderCustomStyles name="Q19" setResponses={setResponses} responses={responses}/> 
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">ensuring logical consistency</div>
-                        </div></p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">ensuring logical consistency</div>
+                        </div>
+                        </p>
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5 mx-auto">
                         When faced with a challenging problem, do you usually:
-                        <div className="flex flex-row justify-center content-center items-center">
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">focus on finding a core solution that simplifies the issue</div>
+                        <div className="flex flex-col lg:flex-row items-center justify-center">
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">focus on finding a core solution that simplifies the issue</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 px-4">delve into the intricacies of the problem, considering multiple facets</div>
+                            </div>
                             <SliderCustomStyles name="Q20" setResponses={setResponses} responses={responses}/> 
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">delve into the intricacies of the problem, considering multiple facets</div>
-                        </div></p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
-                        <p className="text-center text-2xl mb-1 mt-10 p-1 max-w-[1000px] mx-auto">
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">delve into the intricacies of the problem, considering multiple facets</div>
+                        </div>
+                        </p>
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
+                        <p className="text-center mb-1 lg:mt-10 p-5 mx-auto">
                         Are you more inclined to focus on:
-                        <div className="flex flex-row justify-center content-center items-center">
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">things, information, and worldviews</div>
+                        <div className="flex flex-col lg:flex-row items-center justify-center">
+                            <div className="flex flex-row mx-auto my-4 items-center">
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">things, information, and worldviews</div>
+                                <div className="p-4 lg:hidden">or</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 px-4">people, fairness, and interpersonal dynamics</div>
+                            </div>
                             <SliderCustomStyles name="Q21" setResponses={setResponses} responses={responses}/> 
-                            <div className="text-2xl mb-1 p-1 w-[275px] mx-auto">people, fairness, and interpersonal dynamics</div>
-                        </div></p>
-                        <hr class="h-px my-7 border-0 bg-black"></hr>
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">people, fairness, and interpersonal dynamics</div>
+                        </div>
+                        </p>
+                        <hr class="h-px mt-3 border-0 bg-black"></hr>
                         <div className="flex flex-row justify-center content-center">
-                            <button onClick={() => { handlePreviousSet(); scrollToTop(); }}><Button variant="outlined" className="text-2xl mx-4 font-light rounded-full normal-case">Back</Button></button>
-                            <button onClick={handleSubmit}><Button variant="outlined" className="text-2xl mx-4 font-light rounded-full normal-case">Submit</Button></button>
+                            <button onClick={() => { handlePreviousSet(); scrollToTop(); }}><Button variant="outlined" className="text-2xl mx-4 my-7 font-light rounded-full normal-case">Back</Button></button>
+                            <button onClick={handleSubmit}><Button variant="outlined" className="text-2xl mx-4 my-7 font-light rounded-full normal-case">Submit</Button></button>
                         </div>
                     </div>
                 )}
