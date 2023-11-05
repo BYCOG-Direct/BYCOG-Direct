@@ -78,6 +78,13 @@ const Nav = () => {
           // Conditionally include onClick only when displayLongNav is true
           { ...(displayLongNav ? { onClick: handleNavClick } : {}) }
           >
+            <Link href="/" className={displayLongNav ? " text-zero transition-all duration-500" : "hover:text-tan transition-all duration-500"}>Home</Link>
+            <div class={displayLongNav ? "w-[36px] h-[2px] bg-tan mx-[6px] my-[8px] transition-all duration-500" : "w-[36px] h-[2px] bg-tan mx-[6px] my-[10px] transition-all duration-500"}></div>
+            <Link href="/index" className={displayLongNav ? "text-zero transition-all duration-500" : "hover:text-tan transition-all duration-500"}>Index</Link>
+            <div class={displayLongNav ? "w-[36px] h-[2px] bg-tan mx-[6px] my-[5px] transition-all duration-500" : "w-[36px] h-[2px] bg-tan mx-[6px] my-[10px] transition-all duration-500"}></div>
+            <Link href="/learn/essentials" className={displayLongNav ? "text-zero transition-all duration-500" : "hover:text-tan transition-all duration-500"}>Learn</Link>
+            <div class={displayLongNav ? "w-[36px] h-[2px] bg-tan mx-[6px] my-[8px] transition-all duration-500" : "w-[36px] h-[2px] bg-tan mx-[6px] my-[10px] transition-all duration-500"}></div>                
+            <Link href="/visualiser" className={displayLongNav ? "text-zero transition-all duration-500" : "mb-3 hover:text-tan transition-all duration-500"}>Tools</Link>
             <Link href="/profile">
               <div className="flex justify-center items-center">
                 <Image
@@ -93,13 +100,6 @@ const Nav = () => {
                 />
               </div>
             </Link>
-            <Link href="/" className={displayLongNav ? " text-zero transition-all duration-500" : "mt-2 hover:text-tan transition-all duration-500"}>Home</Link>
-            <div class={displayLongNav ? "w-[36px] h-[2px] bg-tan mx-[6px] my-[8px] transition-all duration-500" : "w-[36px] h-[2px] bg-tan mx-[6px] my-[10px] transition-all duration-500"}></div>
-            <Link href="/index" className={displayLongNav ? "text-zero transition-all duration-500" : "hover:text-tan transition-all duration-500"}>Index</Link>
-            <div class={displayLongNav ? "w-[36px] h-[2px] bg-tan mx-[6px] my-[5px] transition-all duration-500" : "w-[36px] h-[2px] bg-tan mx-[6px] my-[10px] transition-all duration-500"}></div>
-            <Link href="/learn/essentials" className={displayLongNav ? "text-zero transition-all duration-500" : "hover:text-tan transition-all duration-500"}>Learn</Link>
-            <div class={displayLongNav ? "w-[36px] h-[2px] bg-tan mx-[6px] my-[8px] transition-all duration-500" : "w-[36px] h-[2px] bg-tan mx-[6px] my-[10px] transition-all duration-500"}></div>                
-            <Link href="/visualiser" className={displayLongNav ? "text-zero transition-all duration-500" : "hover:text-tan transition-all duration-500"}>Tools</Link>
           </div>
         </div>
       </div>    
