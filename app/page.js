@@ -15,22 +15,23 @@ export default function Home() {
 
       <TestSuggest />
 
-      <div className='py-10 text-center max-w-[750px] mx-auto'>
+      <div className='mt-9 mx-9 mb-5 text-center'>
         <p>Below each person’s likes, dislikes, decision making and personality is a	process they impulsively use all the time.</p>
         <p>We call these processes bycodes.</p>
       </div>
 
       <Testimonials />
 
-      <div className='bg-tan pageClip w-full h-[150px]'></div>
-      <div className='-mt-[150px] bg-gray w-full h-[150px]'></div>
+      {/*<div className='mt-32 -mb-1 bg-tan w-full bannerClip z-0 h-[7.5vw]'></div>*/}
+      <div className='bg-tan pageClip w-full lg:h-[7.6vw]'></div>
+      <div className='bg-darkGray w-full lg:h-[7.5vw] lg:-mt-[7.5vw]'></div>
 
-      <PopularContainer>
+      {/*<PopularContainer>
         <PopularEntries/>
         <Courses/>
         <PopularTools/>
         <PopularProfiles/>
-      </PopularContainer>
+      </PopularContainer>*/}
 
       <Footer />
     </main>

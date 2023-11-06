@@ -23,17 +23,21 @@ const Banner = () => {
 
   return (
     <>
-      <div className="bg-darkGray flex justify-center align-center flex-col pt-40 w-full">
-        {/* <div className="flex justify-end w-full"> <div className="relative bg-black w-[438px] h-[64px] right-20 -top-[132px] rounded-full"> </div> </div> */}
+      <div className="bg-darkGray flex w-screen lg:hidden">
+        <img src="/images/BYCOG_Direct_Logo.png" className="w-[205.02px] h-12 m-9 transition"/>
+      </div>
+      <div className="bg-darkGray hidden lg:flex justify-center align-center flex-col pt-40 w-full">
+        
         <Image
-          className='w-[750px] h-full mx-auto'
+          className='w-[40vw] h-full mx-auto'
           src="/images/BYCOG_Direct_Logo.png"
           height={0}
           width={0}
           sizes="100vw"
           style={{ opacity: scrollOpacity }} // Set the opacity using inline style
         />
-        <div className='mt-32 -mb-1 bg-tan w-full bannerClip h-[150px] z-0'></div>
+        
+        <div className='mt-32 -mb-1 bg-tan w-full bannerClip z-0 h-[7.5vw]'></div>
       </div>
     </>
   );
