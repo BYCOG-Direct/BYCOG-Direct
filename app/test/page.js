@@ -297,12 +297,13 @@ export default function Page() {
                         When you encounter a new challenge do you more often:
                         <div className="flex flex-col lg:flex-row items-center justify-center">
                             <div className="flex flex-row mx-auto my-4 items-center">
-                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">stick to what you know first</div>
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">Apply a solution you know</div>
                                 <div className="p-4 lg:hidden">or</div>
-                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 py-1 px-4">try something different</div>
+                                <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 py-1 px-4">explore alternative solutions</div>
                             </div>
                             <SliderCustomStyles name="Q03" setResponses={setResponses} responses={responses}/> 
-                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">try something different</div>
+                            <div className="hidden lg:inline-block mb-1 p-4 w-[275px] mx-auto">explore alternative solutions
+                            </div>
                         </div>
                         </p>
                         <hr class="h-px mt-3 border-0 bg-black"></hr>
@@ -438,7 +439,7 @@ export default function Page() {
                         When you explain topics to others do you:
                         <div className="flex flex-col lg:flex-row items-center justify-center">
                             <div className="flex flex-row mx-auto my-4 items-center">
-                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">start with the point</div>
+                                <div className="max-w-[275px] lg:w-[275px] mb-1 py-1 px-4">start with the main point</div>
                                 <div className="p-4 lg:hidden">or</div>
                                 <div className="max-w-[275px] lg:w-[275px] lg:hidden mb-1 px-4">build up to the conclusion with facts</div>
                             </div>

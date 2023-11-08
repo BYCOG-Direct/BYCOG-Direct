@@ -36,15 +36,16 @@ const Nav = () => {
     return (
       <div>
         <div>
-          <div className={displayLongNav 
-          ? "fixed top-0 left-0 w-full h-full -z-10 transition-all duration-500" 
-          : "fixed top-0 left-0 w-full h-full z-40 bg-black bg-opacity-50 transition-all duration-500"} 
-          onClick={handleNavClick}>
-          </div>
+          <div 
+            className={displayLongNav 
+              ? "fixed top-0 left-0 w-full h-full z-40 bg-opacity-0 transition-all duration-500 pointer-events-none" 
+              : "fixed top-0 left-0 w-full h-full z-40 bg-mediumBlack bg-opacity-50 transition-all duration-500"} 
+            onClick={displayLongNav ? undefined : handleNavClick}
+          ></div>
         </div>
         <div className={navHeight 
-          ? "hidden lg:inline-flex duration-500 fixed flex justify-center gap-2 items-center p-3 mx-20 my-7 right-0 z-50 rounded-full bg-darkGray" 
-          : "hidden lg:inline-flex duration-150 fixed flex justify-center gap-2 items-center p-3 mx-20 my-5 right-0 z-50 rounded-full bg-gray shadow-xl"
+          ? "backdrop-filter backdrop-blur-lg bg-opacity-75 hidden lg:inline-flex duration-500 fixed flex justify-center gap-2 items-center p-3 mx-20 my-7 right-0 z-50 rounded-full bg-mediumBlack" 
+          : "backdrop-filter backdrop-blur-lg bg-opacity-75 hidden lg:inline-flex duration-150 fixed flex justify-center gap-2 items-center p-3 mx-20 my-5 right-0 z-50 rounded-full bg-lightBlack drop-shadow-xl"
         }>
           <div className="flex justify-center divide-x-2 divide-tan text-white text-center font-light text-xl">
             <Link href="/" className="py-1 px-3 hover:text-tan">Home</Link>
@@ -63,12 +64,12 @@ const Nav = () => {
           navHeight 
           // Top of screen nav bar closed
           ? (displayLongNav 
-            ? "lg:hidden transition-all duration-500 bg-darkGray fixed flex justify-center gap-2 items-center p-3 mx-5 my-6 right-0 z-50 rounded-full"
-            : "lg:hidden transition-all duration-300 bg-gray shadow-xl fixed flex justify-center gap-2 items-center p-5 m-3 right-0 z-50 rounded-full")
+            ? "backdrop-filter backdrop-blur-lg bg-opacity-75 lg:hidden transition-all duration-500 bg-mediumBlack fixed flex justify-center gap-2 items-center p-3 mx-5 my-6 right-0 z-50 rounded-full"
+            : "backdrop-filter backdrop-blur-lg bg-opacity-75 lg:hidden transition-all duration-300 bg-lightBlack drop-shadow-xl fixed flex justify-center gap-2 items-center p-5 m-3 right-0 z-50 rounded-full")
           // Top of screen nav bar Open
           : (displayLongNav 
-            ? "lg:hidden transition-all duration-150 bg-gray shadow-xl fixed flex justify-center gap-2 items-center p-3 m-5 right-0 z-50 rounded-full"
-            : "lg:hidden transition-all duration-300 bg-gray shadow-xl fixed flex justify-center gap-2 items-center p-5 m-3 right-0 z-50 rounded-full") 
+            ? "backdrop-filter backdrop-blur-lg bg-opacity-75 lg:hidden transition-all duration-150 bg-lightBlack drop-shadow-xl fixed flex justify-center gap-2 items-center p-3 m-5 right-0 z-50 rounded-full"
+            : "backdrop-filter backdrop-blur-lg bg-opacity-75 lg:hidden transition-all duration-300 bg-lightBlack drop-shadow-xl fixed flex justify-center gap-2 items-center p-5 m-3 right-0 z-50 rounded-full") 
         }>
           <div className={
             displayLongNav

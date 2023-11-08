@@ -59,8 +59,10 @@ export default function Page() {
         <main className={modules.length === 0 ? 'min-h-screen flex justify-center' : ''}>
             <div className="flex justify-center items-center flex-col gap-7 flex-wrap mt-5" id="god">
                 <div>
-                    <div className='max-w-max p-3 mx-auto bg-gray rounded-full cursor-pointer hover:scale-[1.1] hover:opacity-[0.85] transition duration-[0.1s]' onClick={newModule}>
-                        <Image className='w-12 h-12' src="/images/visualiser/plus.svg" height={0} width={0} sizes="100vw" />
+                    <div className='max-w-max p-3 mx-auto bg-lightBlack rounded-full cursor-pointer hover:scale-[1.1] hover:opacity-[0.85] transition duration-[0.1s]' onClick={newModule}>
+                        <div className='bg-tan mt-2 w-[2px] h-[13px] mx-auto'></div>
+                        <div className='bg-tan mx-2 w-7 h-[2px]'></div>
+                        <div className='bg-tan mb-2 w-[2px] h-[13px] mx-auto'></div>
                     </div>
                     <div className='mt-1'>
                         Add Bycode

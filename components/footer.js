@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 const Footer = () => {
     return (
-        <div className="bg-darkGray p-12 text-tan">
-            <div className='w-1/2 mx-auto grid lg:grid-cols-4 gap-7'>
+        <div className="bg-mediumBlack p-12 text-tan justify-center">
+            <div className='w-1/2 mx-auto grid lg:grid-cols-4 gap-7 justify-center'>
                 <div className='flex flex-col gap-2 justify-start items-end'>
                     <div className='text-xl'>Contact</div>
                     <Link href="" className='text-[16px] font-light mr-2 hover:border-b border-tan max-w-max'>Email</Link>

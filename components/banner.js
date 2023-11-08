@@ -23,10 +23,10 @@ const Banner = () => {
 
   return (
     <>
-      <div className="bg-darkGray flex w-screen lg:hidden">
+      <div className="bg-mediumBlack flex w-screen lg:hidden">
         <img src="/images/BYCOG_Direct_Logo.png" className="w-[205.02px] h-12 m-9 transition"/>
       </div>
-      <div className="bg-darkGray hidden lg:flex justify-center align-center flex-col pt-40 w-full">
+      <div className="bg-mediumBlack hidden lg:flex justify-center align-center flex-col pt-40 w-full">
         
         <Image
           className='w-[40vw] h-full mx-auto'
@@ -37,7 +37,7 @@ const Banner = () => {
           style={{ opacity: scrollOpacity }} // Set the opacity using inline style
         />
         
-        <div className='mt-32 -mb-1 bg-tan w-full bannerClip z-0 h-[7.5vw]'></div>
+        <div className='mt-32 -mb-1 bg-hwite w-full bannerClip z-0 h-[7.5vw]'></div>
       </div>
     </>
   );

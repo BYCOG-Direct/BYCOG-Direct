@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 body {
-    background-color: #D9D7D2;
+    background-color: #F5F5F5;
     font-size: 20px;
-    color: #3D3B3C;
+    color: #1C1B1B;
 }
 
 .bannerClip {

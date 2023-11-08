@@ -4,8 +4,8 @@ import Footer from '@components/footer';
 export default function Page() {
     return (
         <main>
-            <div className="flex flex-row content-center justify-center">
-                <div className="w-screen h-32 bg-darkGray">
+            <div className="flex flex-row justify-center content-center">
+                <div className="bg-mediumBlack h-32 w-screen">
                     <div className="flex flex-row text-center"> 
                         <img src="/images/BYCOG_Direct_Logo.png" className="w-auto h-12 transition m-9"/>
                         <p className="mt-10 text-4xl text-white">Essentials</p>
@@ -149,7 +149,7 @@ export default function Page() {
             </div>
 
             {/* <!-- MODULES --> */}
-            <div className="flex flex-row content-center justify-center bg-darkGray text-tan">
+            <div className="flex flex-row justify-center content-center bg-mediumBlack text-tan">
                 <div id="flex flex-col justify-evenly content-center flex-nowrap w-[calc(32rem+1/6)]">
                     <p></p>
                     <p className="mt-10 text-4xl text-center">
@@ -165,9 +165,9 @@ export default function Page() {
             </div>
 
             <div>
-                <div className="flex flex-row flex-wrap content-center justify-center bg-darkGray text-tan">
-                    <div className="flex-row justify-evenly items-center p-5 m-4 w-[44rem] rounded-3xl bg-gray text-tan">  
-                        <p className="m-auto text-3xl text-center transition hover:opacity-90">
+                <div className="flex flex-row justify-center content-center bg-mediumBlack text-tan flex-wrap">
+                    <div className="flex-row justify-evenly items-center p-5 m-4 w-[44rem] rounded-3xl bg-lightBlack text-tan">  
+                        <p className="text-center text-3xl m-auto transition hover:opacity-90">
                             Observer Module Axes<br/>
                             <font COLOR="grey" SIZE="4px">These modules focus on observing unprocessed perceptions.</font> 
                         </p>
@@ -224,8 +224,8 @@ export default function Page() {
                             <div className="flex items-center w-[22rem] h-[16.5rem] bg-logoYellow text-gray rounded-r-3xl"></div>
                         </div>
                     </div>
-                    <div className="flex-row justify-evenly items-center p-5 m-4 w-[44rem] rounded-3xl bg-gray text-tan">  
-                        <p className="m-auto text-3xl text-center transition hover:opacity-90">
+                    <div className="flex-row justify-evenly items-center p-5 m-4 w-[44rem] rounded-3xl bg-lightBlack text-tan">  
+                        <p className="text-center text-3xl m-auto transition hover:opacity-90">
                             Decider Module Axes<br/><font COLOR="grey" SIZE="4px">These modules focus on resolving unprocessed perceptions.</font> 
                         </p>
                         <p></p>
@@ -284,7 +284,7 @@ export default function Page() {
                 </div>
             </div> 
             
-            <div className="flex flex-row content-center justify-center bg-darkGray text-tan">
+            <div className="flex flex-row justify-center content-center bg-mediumBlack text-tan">
                 <div id="flex flex-col justify-evenly content-center flex-nowrap w-[calc(32rem+1/6)]">
                     <p className="text-center text-2xl mt-1 mb-10 p-1 max-w-[750px] mx-auto">
                         To find out more about each model click on them!<br/>
@@ -308,8 +308,8 @@ export default function Page() {
             </div>
 
             <div>
-                <div className="flex flex-row content-center justify-center">
-                    <div className="flex-row justify-evenly items-center p-5 m-4 w-[32rem] rounded-3xl bg-gray text-tan">
+                <div className="flex flex-row justify-center content-center">
+                    <div className="flex-row justify-evenly items-center p-5 m-4 w-[32rem] rounded-3xl bg-lightBlack text-tan">
                         <p></p> 
                         <p className="m-auto text-3xl text-center transition hover:opacity-90">
                             <Link href="/"><font COLOR="#D9D7D2">D - Direct</font></Link><br/><font COLOR="grey" SIZE="5px">Ai or Ci with Ve or Re</font>
@@ -318,7 +318,7 @@ export default function Page() {
                             The movement of aligning the tribe with known, and aligning known with the tribe.<br/><br/><i>getting the path known with others</i>
                         </p>
                     </div>
-                    <div className="flex-row justify-evenly items-center p-5 m-4 w-[32rem] rounded-3xl bg-gray text-tan">
+                    <div className="flex-row justify-evenly items-center p-5 m-4 w-[32rem] rounded-3xl bg-lightBlack text-tan">
                         <p></p> 
                         <p className="m-auto text-3xl text-center transition hover:opacity-90">
                             <Link href="/"><font COLOR="#D9D7D2">C - Confer</font></Link><br/><font COLOR="grey" SIZE="5px">Ae or Ce with Ve or Re</font>
@@ -331,8 +331,8 @@ export default function Page() {
             </div>
 
             <div>
-                <div className="flex flex-row content-center justify-center">
-                    <div className="flex-row justify-evenly items-center p-5 m-4 w-[32rem] rounded-3xl bg-gray text-tan">
+                <div className="flex flex-row justify-center content-center">
+                    <div className="flex-row justify-evenly items-center p-5 m-4 w-[32rem] rounded-3xl bg-lightBlack text-tan">
                         <p></p> 
                         <p className="m-auto text-3xl text-center transition hover:opacity-90">
                                 <Link href="/"><font COLOR="#D9D7D2">R - Revise</font></Link><br/><font COLOR="grey" SIZE="5px">Ai or Ci with Vi or Ri</font>
@@ -341,7 +341,7 @@ export default function Page() {
                             The movement of self reflecting on known, and of known being tweaked by the self.<br/><br/><i>minimising the path taken</i>
                         </p>
                     </div>
-                    <div className="flex-row justify-evenly items-center p-5 m-4 w-[32rem] rounded-3xl bg-gray text-tan">
+                    <div className="flex-row justify-evenly items-center p-5 m-4 w-[32rem] rounded-3xl bg-lightBlack text-tan">
                         <p></p> 
                         <p className="m-auto text-3xl text-center transition hover:opacity-90">
                             <Link href="/"><font COLOR="#D9D7D2">S - Search</font></Link><br/><font COLOR="grey" SIZE="5px">Vi or Ri with Ae or Ce</font>
