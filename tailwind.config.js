@@ -19,7 +19,10 @@ module.exports = withMT({
         logoRed: '#E07A5F',
         gray: '#3D3B3C',
         darkGray: '#323031',
+        lightBlack: '#212121',
+        mediumBlack: '#121212',
         tan: '#D9D7D2',
+        hwite: '#F5F4F2',
         orange: '#e07a5f',
         lightOrange: '#f2cc8f',
         randPurp: '#8D4CB2'

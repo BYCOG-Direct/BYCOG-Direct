@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Testimonials = () => {
     return (
-        <div className='bg-tan w-full pb-24 flex-col'>
+        <div className='w-full pb-24 flex-col'>
             <div className='text-center text-4xl font-semibold mb-4'>Testimonials</div>
             <div class="flex justify-center">
                 <div className="mx-9 columns-1 md:columns-2 lg:columns-3 max-w-[1024px]">

@@ -23,8 +23,8 @@ export default function Home() {
       <Testimonials />
 
       {/*<div className='mt-32 -mb-1 bg-tan w-full bannerClip z-0 h-[7.5vw]'></div>*/}
-      <div className='bg-tan pageClip w-full lg:h-[7.6vw]'></div>
-      <div className='bg-darkGray w-full lg:h-[7.5vw] lg:-mt-[7.5vw]'></div>
+      <div className='bg-hwite pageClip w-full lg:h-[7.6vw]'></div>
+      <div className='bg-mediumBlack w-full lg:h-[7.5vw] lg:-mt-[7.5vw]'></div>
 
       {/*<PopularContainer>
         <PopularEntries/>
