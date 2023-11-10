@@ -5,13 +5,17 @@ export default function Page() {
     return (
         <main>
             <div className="flex flex-row justify-center content-center">
-                <div className="bg-mediumBlack h-32 w-screen">
-                    <div className="flex flex-row text-center"> 
-                        <img src="/images/BYCOG_Direct_Logo.png" className="w-auto h-12 transition m-9"/>
-                        <p className="mt-10 text-4xl text-white">Essentials</p>
+                <div className="bg-mediumBlack flex w-screen">
+                    <div className="flex flex-col md:flex-row text-center"> 
+                    <Link href="/">
+                        <img src="/images/BYCOG_Direct_Logo.png" className="w-[205.02px] h-12 mt-9 ml-9 md:m-9 transition"/>
+                    </Link>
+                    <div className="flex flex-col place-content-center w-screen md:w-auto"> 
+                        <p className="text-white text-3xl my-3">Essentials</p>
+                    </div>
                     </div>
                 </div>
-            </div>
+                </div>
 
             {/* <!-- Attention Hook --> */}
             <div className="flex flex-row content-center justify-center">

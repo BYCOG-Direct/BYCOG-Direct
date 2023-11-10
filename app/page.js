@@ -1,6 +1,7 @@
 import Banner from '@components/banner';
 import Footer from '@components/footer';
 import Testimonials from '@components/testimonials';
+import Link from "next/link"
 import Image from 'next/image';
 import TestSuggest from './testSuggest';
 import PopularContainer from './popularContainer';
@@ -11,7 +12,17 @@ export default function Home() {
   return (
     <main>
       
-      <Banner />
+      <div className="flex flex-row justify-center content-center">
+          <div className="bg-mediumBlack flex w-screen">
+            <div className="flex flex-col md:flex-row text-center"> 
+              <Link href="/">
+                <img src="/images/BYCOG_Direct_Logo.png" className="w-[205.02px] h-12 m-9 transition"/>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* <Banner /> */}
 
       <TestSuggest />
 

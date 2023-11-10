@@ -44,8 +44,8 @@ const Nav = () => {
           ></div>
         </div>
         <div className={navHeight 
-          ? "backdrop-filter backdrop-blur-lg bg-opacity-75 hidden lg:inline-flex duration-500 fixed flex justify-center gap-2 items-center p-3 mx-20 my-7 right-0 z-50 rounded-full bg-mediumBlack" 
-          : "backdrop-filter backdrop-blur-lg bg-opacity-75 hidden lg:inline-flex duration-150 fixed flex justify-center gap-2 items-center p-3 mx-20 my-5 right-0 z-50 rounded-full bg-lightBlack drop-shadow-xl"
+          ? "backdrop-filter backdrop-blur-lg bg-opacity-70 hidden lg:inline-flex duration-500 fixed flex justify-center gap-2 items-center p-3 mx-20 my-7 right-0 z-50 rounded-full bg-mediumBlack" 
+          : "backdrop-filter backdrop-blur-lg bg-opacity-70 hidden lg:inline-flex duration-150 fixed flex justify-center gap-2 items-center p-3 mx-20 my-5 right-0 z-50 rounded-full bg-lightBlack drop-shadow-xl"
         }>
           <div className="flex justify-center divide-x-2 divide-tan text-white text-center font-light text-xl">
             <Link href="/" className="py-1 px-3 hover:text-tan">Home</Link>
@@ -64,12 +64,12 @@ const Nav = () => {
           navHeight 
           // Top of screen nav bar closed
           ? (displayLongNav 
-            ? "backdrop-filter backdrop-blur-lg bg-opacity-75 lg:hidden transition-all duration-500 bg-mediumBlack fixed flex justify-center gap-2 items-center p-3 mx-5 my-6 right-0 z-50 rounded-full"
-            : "backdrop-filter backdrop-blur-lg bg-opacity-75 lg:hidden transition-all duration-300 bg-lightBlack drop-shadow-xl fixed flex justify-center gap-2 items-center p-5 m-3 right-0 z-50 rounded-full")
+            ? "backdrop-filter backdrop-blur-lg bg-opacity-70 lg:hidden transition-all duration-500 bg-mediumBlack fixed flex justify-center gap-2 items-center p-3 mx-5 my-6 right-0 z-50 rounded-full"
+            : "backdrop-filter backdrop-blur-lg bg-opacity-70 lg:hidden transition-all duration-300 bg-lightBlack drop-shadow-xl fixed flex justify-center gap-2 items-center p-5 m-3 right-0 z-50 rounded-full")
           // Top of screen nav bar Open
           : (displayLongNav 
-            ? "backdrop-filter backdrop-blur-lg bg-opacity-75 lg:hidden transition-all duration-150 bg-lightBlack drop-shadow-xl fixed flex justify-center gap-2 items-center p-3 m-5 right-0 z-50 rounded-full"
-            : "backdrop-filter backdrop-blur-lg bg-opacity-75 lg:hidden transition-all duration-300 bg-lightBlack drop-shadow-xl fixed flex justify-center gap-2 items-center p-5 m-3 right-0 z-50 rounded-full") 
+            ? "backdrop-filter backdrop-blur-lg bg-opacity-70 lg:hidden transition-all duration-150 bg-lightBlack drop-shadow-xl fixed flex justify-center gap-2 items-center p-3 m-5 right-0 z-50 rounded-full"
+            : "backdrop-filter backdrop-blur-lg bg-opacity-70 lg:hidden transition-all duration-300 bg-lightBlack drop-shadow-xl fixed flex justify-center gap-2 items-center p-5 m-3 right-0 z-50 rounded-full") 
         }>
           <div className={
             displayLongNav
