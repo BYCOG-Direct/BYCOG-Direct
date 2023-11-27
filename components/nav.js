@@ -104,11 +104,11 @@ const Nav = () => {
         { ...(displayLongNav ? { onClick: handleNavClick } : {}) }
         >
           <Link href="/" className={displayLongNav ? " text-zero transition-all duration-300" : "mt-2 hover:text-tan transition-all duration-300"}>Home</Link>
-          <div class={displayLongNav ? "w-7 h-[2px] bg-tan mx-[6px] my-[11px] transition-all duration-300" : "w-7 h-[2px] bg-tan mx-[6px] my-[10px] transition-all duration-300"}></div>
+          <div className={displayLongNav ? "w-7 h-[2px] bg-tan mx-[6px] my-[11px] transition-all duration-300" : "w-7 h-[2px] bg-tan mx-[6px] my-[10px] transition-all duration-300"}></div>
           <Link href="/" className={displayLongNav ? "text-zero transition-all duration-300" : "hover:text-tan transition-all duration-300"}>Index</Link>
-          <div class={displayLongNav ? "w-7 h-[2px] bg-tan mx-[6px] my-[-1px] transition-all duration-300" : "w-7 h-[2px] bg-tan mx-[6px] my-[10px] transition-all duration-300"}></div>
+          <div className={displayLongNav ? "w-7 h-[2px] bg-tan mx-[6px] my-[-1px] transition-all duration-300" : "w-7 h-[2px] bg-tan mx-[6px] my-[10px] transition-all duration-300"}></div>
           <Link href="/learn/essentials" className={displayLongNav ? "text-zero transition-all duration-300" : "hover:text-tan transition-all duration-300"}>Learn</Link>
-          <div class={displayLongNav ? "w-7 h-[2px] bg-tan mx-[6px] my-[11px] transition-all duration-300" : "w-7 h-[2px] bg-tan mx-[6px] my-[10px] transition-all duration-300"}></div>                
+          <div className={displayLongNav ? "w-7 h-[2px] bg-tan mx-[6px] my-[11px] transition-all duration-300" : "w-7 h-[2px] bg-tan mx-[6px] my-[10px] transition-all duration-300"}></div>                
           <Link href="/visualiser" className={displayLongNav ? "text-zero transition-all duration-300" : "mb-2 hover:text-tan transition-all duration-300"}>Tools</Link>
           <div className={displayLongNav ? 'transition-all duration-300 w-0 h-0': 'transition-all duration-300 w-10 h-10 mb-2'}>
             <div className={displayProfile
