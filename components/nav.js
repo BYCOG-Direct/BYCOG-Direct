@@ -52,7 +52,7 @@ const Nav = () => {
       }>
         <div className="flex justify-center divide-x-2 divide-tan text-white text-center font-light text-xl">
           <Link href="/" className="py-1 px-3 hover:text-tan">Home</Link>
-          <Link href="/index" className="py-1 px-3 hover:text-tan">Index</Link>
+          <Link href="/" className="py-1 px-3 hover:text-tan">Index</Link>
           <Link href="/learn/essentials" className="py-1 px-3 hover:text-tan">Learn</Link>
           <Link href="/visualiser" className="py-1 pl-3 pr-1.5 hover:text-tan">Tools</Link>
         </div>
@@ -68,7 +68,7 @@ const Nav = () => {
 
               <div></div>
               <Link href="/" className="hover:text-tan">Sign<br/>Up</Link>
-              <Link href="/index" className="hover:text-tan">Log<br/>In</Link>
+              <Link href="/" className="hover:text-tan">Log<br/>In</Link>
               <Link href="/learn/essentials" className="hover:text-tan">View</Link>
               <Link href="/visualiser" className="hover:text-tan">Edit</Link>
               <div></div>
@@ -105,7 +105,7 @@ const Nav = () => {
         >
           <Link href="/" className={displayLongNav ? " text-zero transition-all duration-300" : "mt-2 hover:text-tan transition-all duration-300"}>Home</Link>
           <div class={displayLongNav ? "w-7 h-[2px] bg-tan mx-[6px] my-[11px] transition-all duration-300" : "w-7 h-[2px] bg-tan mx-[6px] my-[10px] transition-all duration-300"}></div>
-          <Link href="/index" className={displayLongNav ? "text-zero transition-all duration-300" : "hover:text-tan transition-all duration-300"}>Index</Link>
+          <Link href="/" className={displayLongNav ? "text-zero transition-all duration-300" : "hover:text-tan transition-all duration-300"}>Index</Link>
           <div class={displayLongNav ? "w-7 h-[2px] bg-tan mx-[6px] my-[-1px] transition-all duration-300" : "w-7 h-[2px] bg-tan mx-[6px] my-[10px] transition-all duration-300"}></div>
           <Link href="/learn/essentials" className={displayLongNav ? "text-zero transition-all duration-300" : "hover:text-tan transition-all duration-300"}>Learn</Link>
           <div class={displayLongNav ? "w-7 h-[2px] bg-tan mx-[6px] my-[11px] transition-all duration-300" : "w-7 h-[2px] bg-tan mx-[6px] my-[10px] transition-all duration-300"}></div>                
@@ -122,7 +122,7 @@ const Nav = () => {
               }>
                 <div></div>
                 <Link href="/" className="hover:text-tan">Sign<br/>Up</Link>
-                <Link href="/index" className="hover:text-tan">Log<br/>In</Link>
+                <Link href="/" className="hover:text-tan">Log<br/>In</Link>
                 <Link href="/profile" className="hover:text-tan">View</Link>
                 <Link href="/visualiser" className="hover:text-tan">Edit</Link>
                 <div></div>
