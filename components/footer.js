@@ -25,7 +25,7 @@ const Footer = () => {
                 <div className='flex flex-col gap-2'>
                     <div className=' text-xl ml-1'>Pages</div>
                     <Link href="/" className=' text-[16px] font-light ml-2 hover:border-b border-tan max-w-max'>Home</Link>
-                    <Link href="/index" className=' text-[16px] font-light ml-2 hover:border-b border-tan max-w-max'>Index</Link>
+                    <Link href="/" className=' text-[16px] font-light ml-2 hover:border-b border-tan max-w-max'>Index</Link>
                     <Link href="/learn" className=' text-[16px] font-light ml-2 hover:border-b border-tan max-w-max'>Learn</Link>
                     <Link href="/visualiser" className='text-[16px] font-light ml-2 hover:border-b border-tan max-w-max'>Tools</Link>
                 </div>
