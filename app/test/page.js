@@ -247,7 +247,7 @@ export default function Page() {
                 <div className="bg-mediumBlack flex w-screen">
                     <div className="flex flex-col md:flex-row text-center"> 
                     <Link href="/">
-                        <img src="/images/BYCOG_Direct_Logo.png" className="w-[205.02px] h-12 mt-9 ml-9 md:m-9 transition"/>
+                        <img src="/images/BYCOG_Direct_Logo.png" className="w-auto h-10 mt-10 ml-9 sm:mt-9 sm:h-12 md:m-9 transition"/>
                     </Link>
                     <div className="flex flex-col place-content-center w-screen md:w-auto"> 
                         <p className="text-white text-3xl my-3">Your Free Test</p>
