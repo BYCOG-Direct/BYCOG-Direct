@@ -47,12 +47,12 @@ const Nav = () => {
         ></div>
       </div>
       <div className={navHeight 
-        ? "ring-inset ring-0 ring-white/0 bg-mediumBlack backdrop-filter backdrop-blur-lg bg-opacity-70 hidden lg:inline-flex duration-500 fixed flex justify-center gap-2 items-center p-3 mx-20 my-7 right-0 z-50 rounded-full" 
-        : "ring-inset ring-1 ring-white/20 bg-lightBlack backdrop-filter backdrop-blur-lg bg-opacity-70 hidden lg:inline-flex duration-150 fixed flex justify-center gap-2 items-center p-3 mx-20 my-5 right-0 z-50 rounded-full drop-shadow-xl"
+        ? "ring-inset ring-0 ring-white/0 bg-mediumBlack backdrop-filter backdrop-blur-lg bg-opacity-70 hidden lg:inline-flex duration-500 fixed justify-center gap-2 items-center p-3 mx-20 my-7 right-0 z-50 rounded-full" 
+        : "ring-inset ring-1 ring-white/20 bg-lightBlack backdrop-filter backdrop-blur-lg bg-opacity-70 hidden lg:inline-flex duration-150 fixed justify-center gap-2 items-center p-3 mx-20 my-5 right-0 z-50 rounded-full drop-shadow-xl"
       }>
         <div className="flex justify-center divide-x-2 divide-tan text-white text-center font-light text-xl">
           <Link href="/" className="py-1 px-3 hover:text-tan">Home</Link>
-          <Link href="/" className="py-1 px-3 hover:text-tan">Index</Link>
+          <Link href="/bycodex" className="py-1 px-3 hover:text-tan">Bycodex</Link>
           <Link href="/learn/essentials" className="py-1 px-3 hover:text-tan">Learn</Link>
           <Link href="/visualiser" className="py-1 pl-3 pr-1.5 hover:text-tan">Tools</Link>
         </div>
@@ -105,7 +105,7 @@ const Nav = () => {
         >
           <Link href="/" className={displayLongNav ? " text-zero transition-all duration-300" : "mt-2 hover:text-tan transition-all duration-300"}>Home</Link>
           <div className={displayLongNav ? "w-7 h-[2px] bg-tan mx-[6px] my-[11px] transition-all duration-300" : "w-7 h-[2px] bg-tan mx-[6px] my-[10px] transition-all duration-300"}></div>
-          <Link href="/" className={displayLongNav ? "text-zero transition-all duration-300" : "hover:text-tan transition-all duration-300"}>Index</Link>
+          <Link href="/bycodex" className={displayLongNav ? "text-zero transition-all duration-300" : "hover:text-tan transition-all duration-300"}>Bycodex</Link>
           <div className={displayLongNav ? "w-7 h-[2px] bg-tan mx-[6px] my-[-1px] transition-all duration-300" : "w-7 h-[2px] bg-tan mx-[6px] my-[10px] transition-all duration-300"}></div>
           <Link href="/learn/essentials" className={displayLongNav ? "text-zero transition-all duration-300" : "hover:text-tan transition-all duration-300"}>Learn</Link>
           <div className={displayLongNav ? "w-7 h-[2px] bg-tan mx-[6px] my-[11px] transition-all duration-300" : "w-7 h-[2px] bg-tan mx-[6px] my-[10px] transition-all duration-300"}></div>                
@@ -132,7 +132,7 @@ const Nav = () => {
             <button onClick={profileClick}>
               <div className="transition-all duration-300 flex justify-center items-center z-[52]">
                 <Image className={displayLongNav 
-                  ? 'transition-all duration-300 w-0 h-0 rounded-full border-0 rounded-full z-[52]'
+                  ? 'transition-all duration-300 w-0 h-0 rounded-full border-0 z-[52]'
                   : 'transition-all duration-300 w-10 h-10 rounded-full border-2 border-tan z-[52] m-1'
                 } src="/images/default_pfp.jpg" height={0} width={0} sizes="100vw" />
               </div>
