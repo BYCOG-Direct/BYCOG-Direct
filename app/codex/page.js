@@ -105,7 +105,7 @@ export default function Page() {
                     <div className="w-auto h-0 border-b-2 border-darkGray"> </div>
                     <div className="flex flex-row justify-center content-center">
                         <p className="text-center text-3xl m-auto transition hover:opacity-90">
-                            <Link href="/"><font COLOR="#323031">Hook</font></Link><br/><font COLOR="grey" SIZE="4px">Obligated and compulsed</font>
+                            <Link href="/"><font COLOR="#323031">Hook</font></Link><br/><font COLOR="grey" size="4px">Obligated and compulsed</font>
                         </p>
                         <div className="flex flex-col justify-center content-center">
                             <div className="flex flex-row justify-center content-center">
@@ -124,7 +124,7 @@ export default function Page() {
                     <div className="w-auto h-0 border-b-2 border-darkGray"> </div>
                     <div className="flex flex-row justify-center content-center">
                         <p className="text-center text-3xl m-auto transition hover:opacity-90">
-                            <Link href="/"><font COLOR="#323031">Void</font></Link><br/><font COLOR="grey" SIZE="4px">Resisted and deferred</font>
+                            <Link href="/"><font COLOR="#323031">Void</font></Link><br/><font COLOR="grey" size="4px">Resisted and deferred</font>
                         </p>
                         <div className="flex flex-col justify-center content-center">
                             <div className="flex flex-row justify-center content-center">
@@ -173,7 +173,7 @@ export default function Page() {
                     <div className="flex-row justify-evenly items-center p-5 m-4 w-[44rem] rounded-3xl bg-lightBlack text-tan">  
                         <p className="text-center text-3xl m-auto transition hover:opacity-90">
                             Observer Module Axes<br/>
-                            <font COLOR="grey" SIZE="4px">These modules focus on observing unprocessed perceptions.</font> 
+                            <font COLOR="grey" size="4px">These modules focus on observing unprocessed perceptions.</font> 
                         </p>
                         <p></p>
                         <div className="flex flex-row justify-center content-center">
@@ -201,7 +201,7 @@ export default function Page() {
                             </div>
                             <div className="flex items-center w-[22rem] h-[16.5rem] bg-logoGreen text-gray rounded-r-3xl"></div>
                         </div>
-                        <div><font COLOR="#323031" SIZE="4px">.</font></div>
+                        <div><font COLOR="#323031" size="4px">.</font></div>
                         <div className="flex flex-row justify-center content-center">
                             <div className="flex items-center w-[22rem] h-[16.5rem] bg-logoGreen text-gray rounded-l-3xl">
                                 <div className="flex-row justify-evenly w-[40rem] h-60 rounded-2xl items-center absolute p-5 m-3 bg-white text-darkGray"> 
@@ -230,7 +230,7 @@ export default function Page() {
                     </div>
                     <div className="flex-row justify-evenly items-center p-5 m-4 w-[44rem] rounded-3xl bg-lightBlack text-tan">  
                         <p className="text-center text-3xl m-auto transition hover:opacity-90">
-                            Decider Module Axes<br/><font COLOR="grey" SIZE="4px">These modules focus on resolving unprocessed perceptions.</font> 
+                            Decider Module Axes<br/><font COLOR="grey" size="4px">These modules focus on resolving unprocessed perceptions.</font> 
                         </p>
                         <p></p>
                         <div className="flex flex-row justify-center content-center">
@@ -258,7 +258,7 @@ export default function Page() {
                             </div>
                             <div className="flex items-center w-[22rem] h-[16.5rem] bg-logoRed text-gray rounded-r-3xl"></div>
                         </div>
-                        <div><font COLOR="#323031" SIZE="4px">.</font></div>
+                        <div><font COLOR="#323031" size="4px">.</font></div>
                         <div className="flex flex-row justify-center content-center">
                             <div className="flex items-center w-[22rem] h-[16.5rem] bg-logoRed text-gray rounded-l-3xl">
                                 <div className="flex-row justify-evenly w-[40rem] h-60 rounded-2xl items-center absolute p-5 m-3 bg-white text-darkGray"> 
@@ -316,7 +316,7 @@ export default function Page() {
                     <div className="flex-row justify-evenly items-center p-5 m-4 w-[32rem] rounded-3xl bg-lightBlack text-tan">
                         <p></p> 
                         <p className="text-center text-3xl m-auto transition hover:opacity-90">
-                            <Link href="/"><font COLOR="#D9D7D2">D - Direct</font></Link><br/><font COLOR="grey" SIZE="5px">Ai or Ci with Ve or Re</font>
+                            <Link href="/"><font COLOR="#D9D7D2">D - Direct</font></Link><br/><font COLOR="grey" size="5px">Ai or Ci with Ve or Re</font>
                         </p>
                         <p className="text-center text-xl m-3"> 
                             The movement of aligning the tribe with known, and aligning known with the tribe.<br/><br/><i>getting the path known with others</i>
@@ -325,7 +325,7 @@ export default function Page() {
                     <div className="flex-row justify-evenly items-center p-5 m-4 w-[32rem] rounded-3xl bg-lightBlack text-tan">
                         <p></p> 
                         <p className="text-center text-3xl m-auto transition hover:opacity-90">
-                            <Link href="/"><font COLOR="#D9D7D2">C - Confer</font></Link><br/><font COLOR="grey" SIZE="5px">Ae or Ce with Ve or Re</font>
+                            <Link href="/"><font COLOR="#D9D7D2">C - Confer</font></Link><br/><font COLOR="grey" size="5px">Ae or Ce with Ve or Re</font>
                         </p> 
                         <p className="text-center text-xl m-3">
                             The movement of bouncing new with the tribe, and of the tribe contributing to the new.<br/><br/><i>comparing and sharing paths</i>
@@ -339,7 +339,7 @@ export default function Page() {
                     <div className="flex-row justify-evenly items-center p-5 m-4 w-[32rem] rounded-3xl bg-lightBlack text-tan">
                         <p></p> 
                         <p className="text-center text-3xl m-auto transition hover:opacity-90">
-                                <Link href="/"><font COLOR="#D9D7D2">R - Revise</font></Link><br/><font COLOR="grey" SIZE="5px">Ai or Ci with Vi or Ri</font>
+                                <Link href="/"><font COLOR="#D9D7D2">R - Revise</font></Link><br/><font COLOR="grey" size="5px">Ai or Ci with Vi or Ri</font>
                         </p>
                         <p className="text-center text-xl m-3"> 
                             The movement of self reflecting on known, and of known being tweaked by the self.<br/><br/><i>minimising the path taken</i>
@@ -348,7 +348,7 @@ export default function Page() {
                     <div className="flex-row justify-evenly items-center p-5 m-4 w-[32rem] rounded-3xl bg-lightBlack text-tan">
                         <p></p> 
                         <p className="text-center text-3xl m-auto transition hover:opacity-90">
-                            <Link href="/"><font COLOR="#D9D7D2">S - Search</font></Link><br/><font COLOR="grey" SIZE="5px">Vi or Ri with Ae or Ce</font>
+                            <Link href="/"><font COLOR="#D9D7D2">S - Search</font></Link><br/><font COLOR="grey" size="5px">Vi or Ri with Ae or Ce</font>
                         </p> 
                         <p className="text-center text-xl m-3">
                             The movement of aligning self to the new, and selecting what new to align self to.<br/><br/><i>putting self on the preferred path</i>
