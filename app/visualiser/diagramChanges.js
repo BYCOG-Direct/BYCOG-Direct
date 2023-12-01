@@ -46,10 +46,10 @@ export const defaultStyles = {
     knownLeftLetter: "?",
 
     // Module Colours
-    othersColour: "bg-[#D0D0D0]",
-    selfColour: "bg-[#D0D0D0]",
-    newsColour: "bg-[#D0D0D0]",
-    knownColour: "bg-[#D0D0D0]",
+    othersColour: "bg-tan",
+    selfColour: "bg-tan",
+    newsColour: "bg-tan",
+    knownColour: "bg-tan",
 
     // Module Main Letters
     othersMainLetter: "D",
@@ -180,7 +180,7 @@ export const drawDiagram = (type, styles) => {
         case 2: // Major Void
             changeNewStyles({
                 othersBorder: "shadow-[0_0px_0px_23.8235px_rgba(0,0,0,1)] scale-[0.62963]",
-                othersColour: "bg-[#D0D0D0]",
+                othersColour: "bg-tan",
             });
             break;
         case 1: // Minor Hook
@@ -192,7 +192,7 @@ export const drawDiagram = (type, styles) => {
         case -1: // Minor Void
             changeNewStyles({
                 othersBorder: "shadow-[0_0px_0px_15px_rgba(0,0,0,1)] scale-[1]",
-                othersColour: "bg-[#D0D0D0]",
+                othersColour: "bg-tan",
             });
             break;
     }
@@ -212,7 +212,7 @@ export const drawDiagram = (type, styles) => {
         case 2: // Major Void
             changeNewStyles({
                 selfBorder: "shadow-[0_0px_0px_23.8235px_rgba(0,0,0,1)] scale-[0.62963]",
-                selfColour: "bg-[#D0D0D0]",
+                selfColour: "bg-tan",
             });
             break;
         case 1: // Minor Hook
@@ -224,7 +224,7 @@ export const drawDiagram = (type, styles) => {
         case -1: // Minor Void
             changeNewStyles({
                 selfBorder: "shadow-[0_0px_0px_15px_rgba(0,0,0,1)] scale-[1]",
-                selfColour: "bg-[#D0D0D0]",
+                selfColour: "bg-tan",
             });
             break;
     }
@@ -244,7 +244,7 @@ export const drawDiagram = (type, styles) => {
         case 2: // Major Void
             changeNewStyles({
                 newsBorder: "shadow-[0_0px_0px_23.8235px_rgba(0,0,0,1)] scale-[0.62963]",
-                newsColour: "bg-[#D0D0D0]",
+                newsColour: "bg-tan",
             });
             break;
         case 1: // Minor Hook
@@ -256,7 +256,7 @@ export const drawDiagram = (type, styles) => {
         case -1: // Minor Void
             changeNewStyles({
                 newsBorder: "shadow-[0_0px_0px_15px_rgba(0,0,0,1)] scale-[1]",
-                newsColour: "bg-[#D0D0D0]",
+                newsColour: "bg-tan",
             });
             break;
     }
@@ -277,7 +277,7 @@ export const drawDiagram = (type, styles) => {
         case 2: // Major Void
             changeNewStyles({
                 knownBorder: "shadow-[0_0px_0px_23.8235px_rgba(0,0,0,1)] scale-[0.62963]",
-                knownColour: "bg-[#D0D0D0]",
+                knownColour: "bg-tan",
             });
             break;
         case 1: // Minor Hook
@@ -289,7 +289,7 @@ export const drawDiagram = (type, styles) => {
         case -1: // Minor Void
             changeNewStyles({
                 knownBorder: "shadow-[0_0px_0px_15px_rgba(0,0,0,1)] scale-[1]",
-                knownColour: "bg-[#D0D0D0]",
+                knownColour: "bg-tan",
             });
             break;
     }
