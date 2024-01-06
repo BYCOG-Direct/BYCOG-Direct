@@ -1,6 +1,7 @@
 import Banner from '@components/banner';
 import Footer from '@components/footer';
 import Testimonials from '@components/testimonials';
+import Template from '@components/bycodeDescriptions/template';
 import Link from "next/link"
 import Image from 'next/image';
 import TestSuggest from './testSuggest';
@@ -30,6 +31,8 @@ export default function Home() {
         <p>Below each person’s likes, dislikes, decision making and personality is a	process they impulsively use all the time.</p>
         <p>We call these processes bycodes.</p>
       </div>
+
+      <Template/>
 
       <Testimonials />
 
