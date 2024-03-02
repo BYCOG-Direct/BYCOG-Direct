@@ -339,7 +339,7 @@ export default function Page() {
                     <div className="flex-row justify-evenly items-center p-5 m-4 w-[32rem] rounded-3xl bg-lightBlack text-tan">
                         <p></p> 
                         <p className="text-center text-3xl m-auto transition hover:opacity-90">
-                                <Link href="/"><font COLOR="#D9D7D2">R - Revise</font></Link><br/><font COLOR="grey" SIZE="5px">Ai or Ci with Vi or Ri</font>
+                                <Link href="/"><font COLOR="#D9D7D2">R - Refine</font></Link><br/><font COLOR="grey" SIZE="5px">Ai or Ci with Vi or Ri</font>
                         </p>
                         <p className="text-center text-xl m-3"> 
                             The movement of self reflecting on known, and of known being tweaked by the self.<br/><br/><i>minimising the path taken</i>

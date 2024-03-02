@@ -189,7 +189,7 @@ const Module = ({ index, type, styles, setType, setStyles, deleteModule, duplica
                 <br/>
                 <br/>
                 <input className={checkboxStyle} type="checkbox" id="othersModule" data-uncheck="selfModule" checked={type.othersModule} onChange={handleCheckboxChange}/>
-                <label htmlFor="othersModule" className='text-[17px] ml-3'>Tribe</label>
+                <label htmlFor="othersModule" className='text-[17px] ml-3'>Group</label>
                 <br/>
                 <input className={checkboxStyle} type="checkbox" id="newsModule" data-uncheck="knownModule" checked={type.newsModule} onChange={handleCheckboxChange}/>
                 <label htmlFor="newsModule" className='text-[17px] ml-3'>New</label>
@@ -220,7 +220,7 @@ const Module = ({ index, type, styles, setType, setStyles, deleteModule, duplica
             </div>
             <div className="rightModule w-[150px] text-left pl-2 ml-2 border-l-[2px] text-[#5161F2]">
                 <input className={purpleCheckboxStyle}type="checkbox" id="solidOthersModule" data-uncheck="solidSelfModule" checked={type.solidOthersModule} onChange={handleCheckboxChange}/>
-                <label htmlFor="solidOthersModule" className='text-[17px] ml-3 text-[#5161F2]'>Solid Tribe</label>
+                <label htmlFor="solidOthersModule" className='text-[17px] ml-3 text-[#5161F2]'>Solid Group</label>
                 <br/>
                 <input className={purpleCheckboxStyle} type="checkbox" id="solidNewsModule" data-uncheck="solidKnownModule" checked={type.solidNewsModule} onChange={handleCheckboxChange}/>
                 <label htmlFor="solidNewsModule" className='text-[17px] ml-3 text-[#5161F2]'>Solid New</label>
