@@ -188,8 +188,8 @@ const Module = ({ index, type, styles, setType, setStyles, deleteModule, duplica
                 <label htmlFor={`evaluatorModule-${index}`} className='text-[17px] ml-3'>Decider</label>
                 <br/>
                 <br/>
-                <input className={checkboxStyle} type="checkbox" id="othersModule" data-uncheck="selfModule" checked={type.othersModule} onChange={handleCheckboxChange}/>
-                <label htmlFor="othersModule" className='text-[17px] ml-3'>Group</label>
+                <input className={checkboxStyle} type="checkbox" id={`othersModule-${index}`} data-uncheck="selfModule" checked={type.othersModule} onChange={handleCheckboxChange}/>
+                <label htmlFor={`othersModule-${index}`} className='text-[17px] ml-3'>Group</label>
                 <br/>
                 <input className={checkboxStyle} type="checkbox" id={`newsModule-${index}`} data-check="newsModule" data-uncheck="knownModule" checked={type.newsModule} onChange={handleCheckboxChange}/>
                 <label htmlFor={`newsModule-${index}`} className='text-[17px] ml-3'>New</label>
@@ -219,8 +219,8 @@ const Module = ({ index, type, styles, setType, setStyles, deleteModule, duplica
                 <input className={purpleCheckboxStyle} type="checkbox" id={`solidKnownModule-${index}`} data-check="solidKnownModule" data-uncheck="solidNewsModule" checked={type.solidKnownModule} onChange={handleCheckboxChange}/>
             </div>
             <div className="rightModule w-[150px] text-left pl-2 ml-2 border-l-[2px] text-[#5161F2]">
-                <input className={purpleCheckboxStyle}type="checkbox" id="solidOthersModule" data-uncheck="solidSelfModule" checked={type.solidOthersModule} onChange={handleCheckboxChange}/>
-                <label htmlFor="solidOthersModule" className='text-[17px] ml-3 text-[#5161F2]'>Solid Group</label>
+                <input className={purpleCheckboxStyle}type="checkbox" id={`solidOthersModule-${index}`} data-uncheck="solidSelfModule" checked={type.solidOthersModule} onChange={handleCheckboxChange}/>
+                <label htmlFor={`solidOthersModule-${index}`} className='text-[17px] ml-3 text-[#5161F2]'>Solid Group</label>
                 <br/>
                 <input className={purpleCheckboxStyle} type="checkbox" id={`solidNewsModule-${index}`} data-check="solidNewsModule" data-uncheck="solidKnownModule" checked={type.solidNewsModule} onChange={handleCheckboxChange}/>
                 <label htmlFor={`solidNewsModule-${index}`} className='text-[17px] ml-3 text-[#5161F2]'>Solid New</label>
