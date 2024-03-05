@@ -13,10 +13,10 @@ module.exports = withMT({
   theme: {
     extend: {
       colors: {
-        logoBlue: '#7078BF',
-        logoGreen: '#81B29A',
-        logoYellow: '#F2CC8F',
-        logoRed: '#E07A5F',
+        logoBlue: '#5E6EFF',
+        logoGreen: '#56BD8B',
+        logoYellow: '#FFBB55',
+        logoRed: '#FE6C46',
         gray: '#3D3B3C',
         darkGray: '#323031',
         lightBlack: '#212121',
