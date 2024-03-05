@@ -11,7 +11,7 @@ export default function Page() {
                         <img src="/images/BYCOG_Direct_Logo.png" className="w-auto h-10 mt-10 ml-9 sm:mt-9 sm:h-12 md:m-9 transition"/>
                     </Link>
                     <div className="flex flex-col place-content-center w-screen md:w-auto"> 
-                        <p className="text-white text-3xl my-3">Essentials</p>
+                        <p className="text-white text-3xl my-3">Album</p>
                     </div>
                     </div>
                 </div>
